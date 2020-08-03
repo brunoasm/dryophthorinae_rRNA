@@ -1,0 +1,66 @@
+tip_label,higher_taxon,genus,nonitalic_middle,species,nonitalic_end
+Cryptoderma_formosense,Cryptodermatini,Cryptoderma,NA,formosense,
+Cryptoderma_fortunei,Cryptodermatini,Cryptoderma,NA,fortunei,
+Diocalandra_frumenti,Diocalandrina,Diocalandra,NA,frumenti,
+Dryophthorus_corticalisUSNM,Dryophthorini,Dryophthorus,NA,corticalis,1
+Dryophthorus_corticalis_1,Dryophthorini,Dryophthorus,NA,corticalis,2
+Dryophthorus_corticalis_2,Dryophthorini,Dryophthorus,NA,corticalis,3
+Sitophilus_granarius_1,Litosomina,Sitophilus,NA,granarius,1
+Sitophilus_granarius_2,Litosomina,Sitophilus,NA,granarius,2
+Sitophilus_granarius_3,Litosomina,Sitophilus,NA,granarius,3
+Sitophilus_granarius_4,Litosomina,Sitophilus,NA,granarius,4
+Sitophilus_linearis,Litosomina,Sitophilus,NA,linearis,1
+Sitophilus_lineatus,Litosomina,Sitophilus,NA,linearis,2
+Sitophilus_sp_,Litosomina,Sitophilus,sp.,NA,
+Sitophilus_oryzae,Litosomina,Sitophilus,NA,oryzae,
+Sitophilus_zeamais,Litosomina,Sitophilus,NA,zeamais,
+Tryphetus_incarnatus,Litosomina,Tryphetus,NA,incarnatus,
+Nephius_sp_,NA,Nephius,sp.,NA,
+Mesocordylus_bracteolatus,Orthognathini,Mesocordylus,NA,bracteolatus,
+Orthognathus_lividus,Orthognathini,Orthognathus,NA,lividus,
+Rhinostomus_barbirostrisUSNM,Orthognathini,Rhinostomus,NA,barbirostris,1
+Rhinostomus_barbirostris_2,Orthognathini,Rhinostomus,NA,barbirostris,2
+Rhinostomus_barbirostris,Orthognathini,Rhinostomus,NA,barbirostris,3
+Rhinostomus_nigra,Orthognathini,Rhinostomus,NA,niger,
+Sipalinus_gigas,Orthognathini,Sipalinus,NA,gigas,1
+Sipalinus_gigas_2,Orthognathini,Sipalinus,NA,gigas,2
+Yuccaborus_frontalis,Orthognathini,Yuccaborus,NA,frontalis,
+Euplatypus_hintzi,outgroup,Euplatypus,NA,hintzi,
+Euplatypus_parallelus,outgroup,Euplatypus,NA,parallelus,
+Polytus_mellerborgii,Polytina,Polytus,NA,mellerborgii,
+Cyrtotrachelus_thompsoni,Rhynchophorina,Cyrtotrachelus,NA,thompsoni,
+Dynamis_borassi,Rhynchophorina,Dynamis,NA,borassi,
+Rhynchophorus_cruentatus_1,Rhynchophorina,Rhynchophorus,NA,cruentatus,1
+Rhynchophorus_cruentatus_2,Rhynchophorina,Rhynchophorus,NA,cruentatus,2
+Rhynchophorus_ferrugineus,Rhynchophorina,Rhynchophorus,NA,ferrugineus,
+Rhynchophorus_palmarumUSNM,Rhynchophorina,Rhynchophorus,NA,palmarum,3
+Rhynchophorus_palmarum_1,Rhynchophorina,Rhynchophorus,NA,palmarum,1
+Rhynchophorus_palmarum_2,Rhynchophorina,Rhynchophorus,NA,palmarum,2
+Rhynchophorus_phoenicis,Rhynchophorina,Rhynchophorus,NA,phoenicis,
+Cosmoplites_sordidus,Sphenophorina 2,Cosmoplites,NA,sordidus,
+Prodioctes_formosanus,Sphenophorina 2,Prodioctes,NA,formosanus,
+Acantharhinus_carinatus,Sphenophorina 1,Acantharhinus,NA,carinatus,
+Cactophagus_sp_1,Sphenophorina 1,Cactophagus,sp.,NA,1
+Cactophagus_sp_2,Sphenophorina 1,Cactophagus,sp.,NA,2
+Cactophagus_spinolae,Sphenophorina 1,Cactophagus,NA,spinolae,
+Metamasius_callizona,Sphenophorina 1,Metamasius,NA,callizona,
+Metamasius_distortus,Sphenophorina 1,Metamasius,NA,distortus,
+Metamasius_hemipterus,Sphenophorina 1,Metamasius,NA,hemipterus,
+Metamasius_sp_USNM,Sphenophorina 1,Metamasius,sp.,NA,
+Poteriophorus_uhlemanni,Sphenophorina 1,Poteriophorus,NA,uhlemanni,
+Rhabdoscelus_obscurus,Sphenophorina 1,Rhabdoscelus,NA,obscurus,
+Rhodobaenus_cf_nawardii,Sphenophorina 1,Rhodobaenus,cf.,nawardii,
+Rhodobaenus_nigrofasciatus,Sphenophorina 1,Rhodobaenus,NA,nigrofasciatus,
+Sphenophorus_aequalis,Sphenophorina 1,Sphenophorus,NA,aequalis,
+Sphenophorus_brunnipennis_1,Sphenophorina 1,Sphenophorus,NA,brunnipennis,1
+Sphenophorus_brunnipennis_2,Sphenophorina 1,Sphenophorus,NA,brunnipennis,2
+Sphenophorus_sp_1,Sphenophorina 1,Sphenophorus,sp.,NA,1
+Sphenophorus_sp_2,Sphenophorina 1,Sphenophorus,sp.,NA,2
+Tapinostethus,Sphenophorina 1,Tapinostethus,NA,NA,
+Sphenophorus_venatus,Sphenophorina 1,Sphenophorus,NA,venatus,
+Scyphophorus_acupunctatus,Sphenophorina 3,Scyphophorus,NA,acupunctatus,
+Scyphophorus_yuccae,Sphenophorina 3,Scyphophorus,NA,yuccae,
+Trigonotarsus_rugosus,Sphenophorina 3,Trigonotarsus,NA,rugosus,
+Stromboscerini_gen__sp_1,Stromboscerini,NA,Stromboscerini sp. 1,NA,
+Stromboscerini_gen__sp_2,Stromboscerini,NA,Stromboscerini sp. 2,NA,
+Orthosinus,Stromboscerini,Orthosinus,NA,NA,

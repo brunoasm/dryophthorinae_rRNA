@@ -1,0 +1,316 @@
+---
+title: "Time tree of Dryophthorinae"
+output: html_notebook
+---
+
+Here we will prepare a figure comparing inferences from FBD model with node dating for Dryophthorinae.
+
+We start by loading packages.
+```{r}
+rm(list = ls())
+library(ggtree)
+library(cowplot)
+library(treeio)
+library(deeptime)
+library(phytools)
+library(cowplot)
+library(tidyverse)
+```
+
+Let's load the trees.
+```{r}
+ND = treeio::read.beast('ND_figtree.tre')
+FBD = treeio::read.beast('FBD_figtree.tre')
+```
+
+Now we can plot. ggtree is weird to plot time trees with time increasing to the past, so we will create new functions to reverse axes and plot confidence intervals. This is a modification of the revts() function:
+
+```{r}
+revts2 = function (treeview) 
+ {
+     x <- treeview$data$x
+     mx <- max(x, na.rm = TRUE)
+     treeview$data$x <- mx -x
+     treeview$data$branch <- mx - treeview$data$branch
+     
+     return(treeview)
+ }
+```
+
+
+The last piece that we need is to read a table with information about our tips to make pretty tip labels and highlight groups. Let's read the table, create the pretty names and add them to the plot data.
+
+```{r}
+tip_info = read.csv('tip_info.csv') %>%
+  filter(tip_label %in% FBD@phylo$tip.label) %>%
+  mutate(new_genus = ifelse(!is.na(genus),
+                            paste0('italic(', genus, ')~'),
+                            ''),
+         new_middle = ifelse(!is.na(nonitalic_middle),
+                             paste0(nonitalic_middle, '~'),
+                             ''),
+         new_sp = ifelse(!is.na(species),
+                         paste0('italic(', species, ')~'),
+                         ''),
+         new_end = ifelse(!is.na(nonitalic_end),
+                          nonitalic_end,
+                          ''),
+         new_label = paste0(new_genus, new_middle, new_sp, new_end) %>% 
+           str_replace_all(' ','~') %>%
+           str_remove('~$')) %>%
+  select(-new_genus, -new_middle, -new_sp)
+
+tip_info
+```
+
+Now we will add the new label to the ggtree data.
+
+```{r}
+FBD@data = FBD@data %>%
+  left_join(data.frame(node = as.character(match(tip_info$tip_label, FBD@phylo$tip.label)),
+                       new_label = tip_info$new_label))
+
+FBD@data
+```
+
+We will now add the ages in the ND tree to the data table of the FBD tree, so we can plot both together. Some nodes in the FBD tree do not exist in ND, and we will skip. The function `ape::is.monophyletic()` currently has a bug, so we will define a new function provided by Liam Revell.
+
+```{r}
+isMonophyletic <- function(tree,tips){
+  node<-findMRCA(tree,tips)
+  dd<-setdiff(extract.clade(tree,node)$tip.label,tips)
+  !(length(dd)>0)
+}
+
+retrieve_ND_range = function(node){
+  node = as.integer(node)
+  if (node > Ntip(FBD@phylo)){
+    tips = ape::extract.clade(FBD@phylo, node)$tip.label
+    if(isMonophyletic(ND@phylo, tips)){
+    nd = ape::getMRCA(ND@phylo, tips)
+    return(ND@data %>%
+      filter(node == nd) %>%
+      pull(age_hpd95))
+    }
+  }
+  return(list(c(0,0)))
+}
+
+FBD@data = FBD@data %>%
+  rowwise() %>%
+  mutate(ND_range = retrieve_ND_range(node))
+
+FBD@data
+```
+
+To finalize, let's find the nodes corresponding to clades we want to label.
+
+```{r}
+clade_nodes = tip_info %>%
+  filter(!is.na(higher_taxon)) %>%
+  group_by(higher_taxon) %>%
+  summarise(tips = list(as.character(tip_label))) %>%
+  split(.$higher_taxon) %>%
+  purrr::map(~if(length(unlist(.x$tips))>1){ape::getMRCA(FBD@phylo, unlist(.x$tips))}
+             else{match(unlist(.x$tips), FBD@phylo$tip.label)}
+             )
+
+clade_nodes
+
+```
+
+Finally, we have all information needed to plot. We will start with a simple plot and add clade labels and bar ranges later
+
+```{r}
+tr1 = revts2(ggtree(FBD,ladderize = F)) + 
+  geom_tiplab(aes(label = new_label), 
+              parse = T,
+              offset = -2, 
+              size = 2.5) +
+  scale_x_continuous() +
+  #geom_range(range='age_hpd95', branch.length='height_median', color='red', alpha=.6, size=2) +
+  theme_tree2() +
+  coord_geo(xtrans=scales::reverse_trans(), 
+            xlim=c(-180,170),
+            ylim = c(-1,2+Ntip(ND@phylo))) +
+  scale_x_continuous(breaks=seq(0,150,50)) +
+  scale_y_reverse() +
+  theme(axis.line.x = element_blank()) +
+  xlab ('Time (Ma)') 
+tr1
+```
+
+Now we will add clade labels:
+```{r}
+#clrs = RColorBrewer::brewer.pal(length(clade_nodes), 'Paired')
+
+tr1.1 = tr1
+
+for (i in 1:length(clade_nodes)){
+  tr1.1 = tr1.1 +
+    geom_cladelabel(node = clade_nodes[[i]],
+                    label = names(clade_nodes)[i],
+                    offset = -240,
+                    offset.text = -3,
+                    align = T,
+                    color = gray(0.3),
+                    extend = 0.3
+                    )
+}
+tr1.1
+```
+
+Finally, let's place the error bars. We will create a new function since the function in ggtree does not place the bars in the correct place.
+
+
+```{r}
+plot_range = function(tree_img, var = 'age_hpd95', nodes=NULL, clr ='navyblue', yoffset = 0){
+  minmax = t(matrix(unlist(tree_img$data[[var]]),nrow=2))
+  
+  bar_df = as.data.frame(minmax) %>%
+    rename(min = 1,
+           max = 2) %>%
+    bind_cols(select(tree_img$data, node, y, isTip))
+  
+  if (is.null(nodes)){bar_df = dplyr::filter(bar_df,!isTip)}
+  else {bar_df = dplyr::filter(bar_df, node %in% nodes)}
+  
+  tree_img$data$y = tree_img$data$y + yoffset
+  
+  output = tree_img + 
+    geom_segment(aes(x=min, y=y, xend=max, yend=y), 
+                 data=bar_df, 
+                 color=clr, 
+                 alpha=0.5, 
+                 size=1.3)
+  
+  return(output)}
+```
+
+We will now plot ranges for FBD in blue and ND as red.
+
+```{r}
+tr1.2 = plot_range(tr1.1, 
+                   var = 'age_hpd95', 
+                   nodes = NULL, 
+                   clr ='navyblue', 
+                   yoffset = 0)
+
+tr1.2 = plot_range(tr1.2, 
+                   var = 'ND_range', 
+                   nodes = NULL, 
+                   clr ='red4', 
+                   yoffset = 0)
+
+tr1.2
+```
+
+We will now mark nodes that were constrained as monophyletic and that were used in calibration. To do that, let's parse mrbayes node dating input to find tips included in constraints and also those constraints that were used in calibrations.
+
+```{r}
+mrbayes_input = scan('Dryophthorinae_ND.nex',what = character(),sep='\n')
+
+
+taxset_str = grep('taxset',mrbayes_input,value=T)
+
+taxsets = purrr::map(taxset_str, 
+                    ~.x %>%
+                      str_split(' = ') %>%
+                      purrr::map(2) %>%
+             unlist %>%
+             str_remove(' *;') %>%
+             str_split(' ') %>%
+             unlist)
+
+names(taxsets) = purrr::map(taxset_str, 
+                            ~.x %>%
+                              str_remove('=.*$') %>%
+                              str_remove_all('taxset| +')) %>%
+  unlist
+
+
+taxsets = purrr::map(taxsets, ~ifelse(.x %in% names(taxsets),
+                                      taxsets[.x],
+                                      .x) %>%
+                       unlist %>%
+                       unique)
+
+constraints_str = grep('^ +constraint',mrbayes_input, value=T)
+
+constraints = purrr::map(constraints_str,
+                         ~.x %>%
+                           str_remove('^.+=') %>%
+                           str_remove(' *; *$') %>%
+             str_trim() %>%
+             str_split(" ") %>%
+             unlist)
+  
+constraints = purrr::map(constraints, ~ifelse(.x %in% names(taxsets),
+                                 taxsets[.x],
+                                 .x) %>%
+                           unlist %>%
+                           purrr::keep(~.x %in% ND@phylo$tip.label)) 
+
+names(constraints) = purrr::map(constraints_str, 
+                            ~.x %>%
+                              str_remove('=.*$') %>%
+                              str_remove_all('constraint|hard| +')) %>%
+  unlist
+
+constraints = purrr::discard(constraints, ~length(.x) <= 1)
+
+calibrated = c('Dryophthorinae',
+               'Dryophthorini',
+               'Rhynchophorini_part',
+               'all')
+
+```
+
+Now let's use this information to add a column on constraints to the data table.
+
+```{r}
+
+constrained_nodes = purrr::map(constraints,~getMRCA(as.phylo(tr1), .x)) %>% as.vector
+calibrated_nodes = constrained_nodes[c('Dryophthorinae', 'Dryophthorini', 'Rhynchophorini_part', 'all')]
+
+
+
+tr1.2$data = tr1.2$data %>%
+  mutate(highlight = ifelse(node %in% constrained_nodes,
+                ifelse(node %in% calibrated_nodes,'calibrated','constrained'),
+                NA))
+```
+
+
+
+
+```{r}
+tr1.3 = tr1.2 +
+  geom_nodepoint(aes(y = y-0.7, x = x+3, color = highlight), shape = 8) +
+  scale_color_manual(values = c('constrained' = 'black',
+                                'calibrated' = 'chocolate1'),
+                     name = NULL,
+                     breaks = c('constrained', 'calibrated')) +
+  #geom_nodepoint(aes(fill=posterior), shape = 21) +
+  #scale_fill_viridis_c('Posterior\nprobability') +
+  theme(legend.position = c(0.05,0.95),
+        legend.justification = c(0,1))
+
+tr1.3
+```
+Now save.
+```{r}
+ggsave(filename = 'calibrated_tree.pdf',
+       plot = tr1.3,
+       device = 'pdf',
+       width = 7.5,
+       height = 8)
+
+ggsave(filename = 'calibrated_tree.png',
+       plot = tr1.3,
+       device = 'png',
+       width = 7.5,
+       height = 8)
+
+```
+

@@ -1,0 +1,392 @@
+IQ-TREE 2.0.3 built Apr 26 2020
+
+Partition file name: partitions
+Input file name: Dryophthorinae.phy
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 358741
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst. Biol., 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 64 taxa with 5 partitions and 3764 total sites (8.14127% missing data)
+
+  ID  Name                         Type	Seq	Site	Unique	Infor	Invar	Const
+   1  LSU_RNA+LOOP18S              DNA	63	957	325	178	725	725
+   2  Primer+SSU_RNA+STEM18S       DNA	62	1661	449	140	1422	1422
+   3  STEM+LOOP                    DNA	48	502	287	219	246	246
+   4  RAA+RSC                      DNA	48	413	146	77	292	292
+   5  REC+REC_18S+RAA_18S+RSC_18S  DNA	61	231	204	132	49	49
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM3+F+I+G4:LSU_RNA+LOOP18S,TIM3e+R3:Primer+SSU_RNA+STEM18S,K2P+G4:STEM+LOOP,HKY+F+G4:RAA+RSC,HKY+F:REC+REC_18S+RAA_18S+RSC_18S
+
+List of best-fit models per partition:
+
+  ID  Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+   1  TIM3+F+I+G4       -3971.391    7960.783 + 6.95e-310    7960.973 + 4.65e-310    8004.557 + 6.95e-310
+   2  TIM3e+R3          -5380.488   10776.976 + 6.95e-310   10777.063 + 4.65e-310   10820.297 + 6.95e-310
+   3  K2P+G4            -4666.228    9338.457 + 6.95e-310    9338.505 + 4.65e-310    9351.113 + 6.95e-310
+   4  HKY+F+G4          -1976.990    3965.980 + 6.95e-310    3966.187 + 4.65e-310    3990.121 + 6.95e-310
+   5  HKY+F             -2963.744    5937.488 + 6.95e-310    5937.754 + 4.65e-310    5954.700 + 6.95e-310
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model with separate substitution models and separate rates across sites
+
+  ID  Model           Speed  Parameters
+   1  TIM3+F+I+G4    0.3087  TIM3{0.439784,2.18928,4.47141}+F{0.296518,0.223724,0.24207,0.237688}+I{0.486006}+G4{0.457759}
+   2  TIM3e+R3       0.1180  TIM3e{0.579653,1.26218,3.14755}+FQ+R3{0.886468,0.11504,0.0820435,3.27253,0.0314886,19.9923}
+   3  K2P+G4         0.9054  K2P{3.82523}+FQ+G4{0.45031}
+   4  HKY+F+G4       4.1740  HKY{1.53673}+F{0.218785,0.264745,0.192953,0.323516}+G4{1.14851}
+   5  HKY+F          4.7365  HKY{1.42343}+F{0.122869,0.25783,0.330606,0.288695}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -18919.9873 (s.e. 478.2883)
+Unconstrained log-likelihood (without tree): -17665.3114
+Number of free parameters (#branches + #model parameters): 155
+Akaike information criterion (AIC) score: 38149.9747
+Corrected Akaike information criterion (AICc) score: 38163.3782
+Bayesian information criterion (BIC) score: 39116.1265
+
+Total tree length (sum of branch lengths): 5.7738
+Sum of internal branch lengths: 3.0716 (53.1988% of tree length)
+
+WARNING: 2 near-zero internal branches (<0.0003) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Euplatypus_hintzi' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
+                                                                     +--Dynamis_borassi
+                                                                  +--| (96)
+                                                                  |  |  +--Rhynchophorus_cruentatus_1
+                                                                  |  +--| (98)
+                                                                  |     +**Cyrtotrachelus_thompsoni
+                                                               +--| (98)
+                                                               |  |     +--Rhynchophorus_palmarumUSNM
+                                                               |  |  +--| (91)
+                                                               |  |  |  |  +--Rhynchophorus_palmarum_2
+                                                               |  |  |  +--| (100)
+                                                               |  |  |     +**Rhynchophorus_palmarum_1
+                                                               |  +--| (84)
+                                                               |     +--Rhynchophorus_ferrugineus
+                                                            +--| (93)
+                                                            |  +--Rhynchophorus_cruentatus_2
+                                                         +--| (100)
+                                                         |  +--Rhynchophorus_phoenicis
+                                                      +--| (68)
+                                                      |  +--Cosmoplites_sordidus
+                                                   +--| (89)
+                                                   |  +--Prodioctes_formosanus
+                                                +--| (45)
+                                                |  |     +--Rhabdoscelus_obscurus
+                                                |  |  +--| (63)
+                                                |  |  |  |                    +--Metamasius_callizona
+                                                |  |  |  |                 +--| (100)
+                                                |  |  |  |                 |  +--Metamasius_sp_USNM
+                                                |  |  |  |              +--| (94)
+                                                |  |  |  |              |  |     +**Sphenophorus_brunnipennis_1
+                                                |  |  |  |              |  |  +--| (100)
+                                                |  |  |  |              |  |  |  +--Sphenophorus_brunnipennis_2
+                                                |  |  |  |              |  +--| (96)
+                                                |  |  |  |              |     +--Sphenophorus_venatus
+                                                |  |  |  |           +--| (66)
+                                                |  |  |  |           |  |  +--Sphenophorus_sp_1
+                                                |  |  |  |           |  +--| (94)
+                                                |  |  |  |           |     +**Sphenophorus_sp_2
+                                                |  |  |  |        +--| (39)
+                                                |  |  |  |        |  |     +--Cactophagus_sp_1
+                                                |  |  |  |        |  |  +--| (68)
+                                                |  |  |  |        |  |  |  |     +--Rhodobaenus_cf_nawardii
+                                                |  |  |  |        |  |  |  |  +--| (95)
+                                                |  |  |  |        |  |  |  |  |  +--Rhodobaenus_nigrofasciatus
+                                                |  |  |  |        |  |  |  +--| (75)
+                                                |  |  |  |        |  |  |     +--Cactophagus_sp_2
+                                                |  |  |  |        |  +**| (38)
+                                                |  |  |  |        |     |  +--Cactophagus_spinolae
+                                                |  |  |  |        |     +--| (29)
+                                                |  |  |  |        |        +--Tapinostethus
+                                                |  |  |  |     +--| (66)
+                                                |  |  |  |     |  +--Metamasius_distortus
+                                                |  |  |  |  +--| (90)
+                                                |  |  |  |  |  +--Metamasius_hemipterus
+                                                |  |  |  +--| (100)
+                                                |  |  |     +--Acantharhinus_carinatus
+                                                |  +--| (90)
+                                                |     +--Poteriophorus_uhlemanni
+                                             +--| (29)
+                                             |  |        +--Polytus_mellerborgii
+                                             |  |     +--| (99)
+                                             |  |     |  +----Diocalandra_frumenti
+                                             |  |  +--| (94)
+                                             |  |  |  |        +--Sitophilus_linearis
+                                             |  |  |  |     +--| (100)
+                                             |  |  |  |     |  +--Sitophilus_lineatus
+                                             |  |  |  |  +--| (47)
+                                             |  |  |  |  |  |           +**Sitophilus_oryzae
+                                             |  |  |  |  |  |        +--| (91)
+                                             |  |  |  |  |  |        |  +**Sitophilus_granarius_3
+                                             |  |  |  |  |  |     +--| (95)
+                                             |  |  |  |  |  |     |  +**Sitophilus_granarius_4
+                                             |  |  |  |  |  |  +--| (56)
+                                             |  |  |  |  |  |  |  |  +--Sitophilus_zeamais
+                                             |  |  |  |  |  |  |  +--| (55)
+                                             |  |  |  |  |  |  |     +--Tryphetus_incarnatus
+                                             |  |  |  |  |  +--| (89)
+                                             |  |  |  |  |     |  +--Sitophilus_granarius_1
+                                             |  |  |  |  |     +--| (99)
+                                             |  |  |  |  |        +--Sitophilus_granarius_2
+                                             |  |  |  +--| (99)
+                                             |  |  |     +--Sitophilus_sp_
+                                             |  +--| (65)
+                                             |     +---Trigonotarsus_rugosus
++--------------------------------------------| (100)
+|                                            |                 +--Orthognathus_lividus
+|                                            |              +--| (100)
+|                                            |              |  +--Mesocordylus_bracteolatus
+|                                            |           +--| (76)
+|                                            |           |  |  +**Sipalinus_gigas
+|                                            |           |  +--| (98)
+|                                            |           |     +**Sipalinus_gigas_2
+|                                            |        +--| (85)
+|                                            |        |  |        +--Rhinostomus_barbirostrisUSNM
+|                                            |        |  |     +--| (95)
+|                                            |        |  |     |  +--Rhinostomus_barbirostris_2
+|                                            |        |  |  +--| (80)
+|                                            |        |  |  |  |  +--Yuccaborus_frontalis
+|                                            |        |  |  |  +--| (83)
+|                                            |        |  |  |     +------Rhinostomus_barbirostris
+|                                            |        |  +--| (62)
+|                                            |        |     +--------Rhinostomus_nigra
+|                                            |     +--| (86)
+|                                            |     |  |  +---Nephius_sp_
+|                                            |     |  +--| (96)
+|                                            |     |     |     +--Orthosinus
+|                                            |     |     |  +--| (98)
+|                                            |     |     |  |  |  +**Stromboscerini_gen__sp_1
+|                                            |     |     |  |  +--| (100)
+|                                            |     |     |  |     +**Stromboscerini_gen__sp_2
+|                                            |     |     +--| (99)
+|                                            |     |        |  +--Dryophthorus_corticalisUSNM
+|                                            |     |        +--| (100)
+|                                            |     |           |  +**Dryophthorus_corticalis_1
+|                                            |     |           +**| (49)
+|                                            |     |              +--Dryophthorus_corticalis_2
+|                                            |  +--| (24)
+|                                            |  |  |   +--Cryptoderma_fortunei
+|                                            |  |  +---| (100)
+|                                            |  |      +--Cryptoderma_formosense
+|                                            +--| (40)
+|                                               |   +**Scyphophorus_yuccae
+|                                               +---| (100)
+|                                                   +--Scyphophorus_acupunctatus
+|
++--Euplatypus_parallelus
+|
++--Euplatypus_hintzi
+
+Tree in newick format:
+
+(Euplatypus_hintzi:0.0132300838,Euplatypus_parallelus:0.0557014638,(((((((((Dynamis_borassi:0.0258175365,(Rhynchophorus_cruentatus_1:0.0552135459,Cyrtotrachelus_thompsoni:0.0000026933)98:0.0088842913)96:0.0104200803,((Rhynchophorus_palmarumUSNM:0.0145884973,(Rhynchophorus_palmarum_2:0.0058363220,Rhynchophorus_palmarum_1:0.0000010060)100:0.0228704984)91:0.0305476344,Rhynchophorus_ferrugineus:0.0814391767)84:0.0050323914)98:0.0274538383,Rhynchophorus_cruentatus_2:0.0338414917)93:0.0053753249,Rhynchophorus_phoenicis:0.0865627689)100:0.0937044775,Cosmoplites_sordidus:0.0738832789)68:0.0034561754,Prodioctes_formosanus:0.0543812921)89:0.0498846242,((Rhabdoscelus_obscurus:0.1170317062,(((((((Metamasius_callizona:0.0201425353,Metamasius_sp_USNM:0.0091036685)100:0.0158240178,((Sphenophorus_brunnipennis_1:0.0000010060,Sphenophorus_brunnipennis_2:0.0014766160)100:0.0213948630,Sphenophorus_venatus:0.0357401399)96:0.0088423088)94:0.0083581305,(Sphenophorus_sp_1:0.0388963848,Sphenophorus_sp_2:0.0000010060)94:0.0131060505)66:0.0057686020,((Cactophagus_sp_1:0.0307981312,((Rhodobaenus_cf_nawardii:0.0180323617,Rhodobaenus_nigrofasciatus:0.0037206582)95:0.0065667620,Cactophagus_sp_2:0.0076640883)75:0.0028718714)68:0.0026409949,(Cactophagus_spinolae:0.0088368258,Tapinostethus:0.0210602113)29:0.0041705879)38:0.0000020386)39:0.0089479318,Metamasius_distortus:0.0237570484)66:0.0092675203,Metamasius_hemipterus:0.0598183501)90:0.0162217955,Acantharhinus_carinatus:0.0413463173)100:0.0654715387)63:0.0057110698,Poteriophorus_uhlemanni:0.0899109521)90:0.0443189664)45:0.0261729587,(((Polytus_mellerborgii:0.0597667892,Diocalandra_frumenti:0.1716711070)99:0.0418795706,(((Sitophilus_linearis:0.0053911513,Sitophilus_lineatus:0.0028354706)100:0.0148514043,((((Sitophilus_oryzae:0.0000010060,Sitophilus_granarius_3:0.0002602549)91:0.0009590399,Sitophilus_granarius_4:0.0000010060)95:0.0015793027,(Sitophilus_zeamais:0.0073374909,Tryphetus_incarnatus:0.0097650318)55:0.0026845718)56:0.0069512560,(Sitophilus_granarius_1:0.0066768573,Sitophilus_granarius_2:0.0059922137)99:0.0031374897)89:0.0053733924)47:0.0105806469,Sitophilus_sp_:0.0050197207)99:0.0578247769)94:0.0239511141,Trigonotarsus_rugosus:0.1578158553)65:0.0136841643)29:0.0016174127,((((((Orthognathus_lividus:0.0932167774,Mesocordylus_bracteolatus:0.0590022208)100:0.0523548915,(Sipalinus_gigas:0.0000020653,Sipalinus_gigas_2:0.0000010060)98:0.0956288770)76:0.0268823452,(((Rhinostomus_barbirostrisUSNM:0.0002970594,Rhinostomus_barbirostris_2:0.0314113866)95:0.1101684883,(Yuccaborus_frontalis:0.1256505152,Rhinostomus_barbirostris:0.2577690918)83:0.0249514515)80:0.0210369539,Rhinostomus_nigra:0.3185006843)62:0.0540745446)85:0.0462744270,(Nephius_sp_:0.1559890332,((Orthosinus:0.0269190181,(Stromboscerini_gen__sp_1:0.0000023469,Stromboscerini_gen__sp_2:0.0000010060)100:0.0318321276)98:0.0257683714,(Dryophthorus_corticalisUSNM:0.0215916344,(Dryophthorus_corticalis_1:0.0000010060,Dryophthorus_corticalis_2:0.0055005887)49:0.0000898347)100:0.0566765865)99:0.0522430729)96:0.0293877122)86:0.0496670241,(Cryptoderma_fortunei:0.0014027291,Cryptoderma_formosense:0.0035725661)100:0.1419821550)24:0.0018817658,(Scyphophorus_yuccae:0.0000020765,Scyphophorus_acupunctatus:0.0125978373)100:0.1514114752)40:0.0099371212)100:1.5094203370);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -18920.285512
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--Euplatypus_hintzi
+| (100)
++--Euplatypus_parallelus
+|
+|                                                                    +--Dynamis_borassi
+|                                                                 +--| (96)
+|                                                                 |  |  +--Rhynchophorus_cruentatus_1
+|                                                                 |  +--| (98)
+|                                                                 |     +--Cyrtotrachelus_thompsoni
+|                                                              +--| (98)
+|                                                              |  |     +--Rhynchophorus_palmarumUSNM
+|                                                              |  |  +--| (91)
+|                                                              |  |  |  |  +--Rhynchophorus_palmarum_2
+|                                                              |  |  |  +--| (100)
+|                                                              |  |  |     +--Rhynchophorus_palmarum_1
+|                                                              |  +--| (84)
+|                                                              |     +--Rhynchophorus_ferrugineus
+|                                                           +--| (93)
+|                                                           |  +--Rhynchophorus_cruentatus_2
+|                                                        +--| (100)
+|                                                        |  +--Rhynchophorus_phoenicis
+|                                                     +--| (68)
+|                                                     |  +--Cosmoplites_sordidus
+|                                                  +--| (89)
+|                                                  |  +--Prodioctes_formosanus
+|                                               +--| (45)
+|                                               |  |     +--Rhabdoscelus_obscurus
+|                                               |  |  +--| (63)
+|                                               |  |  |  |                    +--Metamasius_callizona
+|                                               |  |  |  |                 +--| (100)
+|                                               |  |  |  |                 |  +--Metamasius_sp_USNM
+|                                               |  |  |  |              +--| (94)
+|                                               |  |  |  |              |  |     +--Sphenophorus_brunnipennis_1
+|                                               |  |  |  |              |  |  +--| (100)
+|                                               |  |  |  |              |  |  |  +--Sphenophorus_brunnipennis_2
+|                                               |  |  |  |              |  +--| (96)
+|                                               |  |  |  |              |     +--Sphenophorus_venatus
+|                                               |  |  |  |           +--| (66)
+|                                               |  |  |  |           |  |  +--Sphenophorus_sp_1
+|                                               |  |  |  |           |  +--| (94)
+|                                               |  |  |  |           |     +--Sphenophorus_sp_2
+|                                               |  |  |  |        +--| (39)
+|                                               |  |  |  |        |  |     +--Cactophagus_sp_1
+|                                               |  |  |  |        |  |  +--| (68)
+|                                               |  |  |  |        |  |  |  |     +--Rhodobaenus_cf_nawardii
+|                                               |  |  |  |        |  |  |  |  +--| (95)
+|                                               |  |  |  |        |  |  |  |  |  +--Rhodobaenus_nigrofasciatus
+|                                               |  |  |  |        |  |  |  +--| (75)
+|                                               |  |  |  |        |  |  |     +--Cactophagus_sp_2
+|                                               |  |  |  |        |  +--| (38)
+|                                               |  |  |  |        |     |  +--Cactophagus_spinolae
+|                                               |  |  |  |        |     +--| (29)
+|                                               |  |  |  |        |        +--Tapinostethus
+|                                               |  |  |  |     +--| (66)
+|                                               |  |  |  |     |  +--Metamasius_distortus
+|                                               |  |  |  |  +--| (90)
+|                                               |  |  |  |  |  +--Metamasius_hemipterus
+|                                               |  |  |  +--| (100)
+|                                               |  |  |     +--Acantharhinus_carinatus
+|                                               |  +--| (90)
+|                                               |     +--Poteriophorus_uhlemanni
+|                                            +--|
+|                                            |  |        +--Polytus_mellerborgii
+|                                            |  |     +--| (99)
+|                                            |  |     |  +----Diocalandra_frumenti
+|                                            |  |  +--| (94)
+|                                            |  |  |  |     +--Sitophilus_linearis
+|                                            |  |  |  |  +--| (100)
+|                                            |  |  |  |  |  +--Sitophilus_lineatus
+|                                            |  |  |  +--| (99)
+|                                            |  |  |     |              +--Sitophilus_oryzae
+|                                            |  |  |     |           +--| (91)
+|                                            |  |  |     |           |  +--Sitophilus_granarius_3
+|                                            |  |  |     |        +--| (95)
+|                                            |  |  |     |        |  +--Sitophilus_granarius_4
+|                                            |  |  |     |     +--| (56)
+|                                            |  |  |     |     |  |  +--Sitophilus_zeamais
+|                                            |  |  |     |     |  +--| (55)
+|                                            |  |  |     |     |     +--Tryphetus_incarnatus
+|                                            |  |  |     |  +--| (89)
+|                                            |  |  |     |  |  |  +--Sitophilus_granarius_1
+|                                            |  |  |     |  |  +--| (99)
+|                                            |  |  |     |  |     +--Sitophilus_granarius_2
+|                                            |  |  |     +--| (51)
+|                                            |  |  |        +--Sitophilus_sp_
+|                                            |  +--| (65)
+|                                            |     +---Trigonotarsus_rugosus
++--------------------------------------------| (29)
+                                             |                 +--Orthognathus_lividus
+                                             |              +--| (100)
+                                             |              |  +--Mesocordylus_bracteolatus
+                                             |           +--| (76)
+                                             |           |  |  +--Sipalinus_gigas
+                                             |           |  +--| (98)
+                                             |           |     +--Sipalinus_gigas_2
+                                             |        +--| (85)
+                                             |        |  |        +--Rhinostomus_barbirostrisUSNM
+                                             |        |  |     +--| (95)
+                                             |        |  |     |  +--Rhinostomus_barbirostris_2
+                                             |        |  |  +--| (80)
+                                             |        |  |  |  |  +--Yuccaborus_frontalis
+                                             |        |  |  |  +--| (83)
+                                             |        |  |  |     +------Rhinostomus_barbirostris
+                                             |        |  +--| (62)
+                                             |        |     +--------Rhinostomus_nigra
+                                             |     +--| (86)
+                                             |     |  |  +---Nephius_sp_
+                                             |     |  +--| (96)
+                                             |     |     |     +--Orthosinus
+                                             |     |     |  +--| (98)
+                                             |     |     |  |  |  +--Stromboscerini_gen__sp_1
+                                             |     |     |  |  +--| (100)
+                                             |     |     |  |     +--Stromboscerini_gen__sp_2
+                                             |     |     +--| (99)
+                                             |     |        |  +--Dryophthorus_corticalisUSNM
+                                             |     |        +--| (100)
+                                             |     |           |  +--Dryophthorus_corticalis_1
+                                             |     |           +--| (49)
+                                             |     |              +--Dryophthorus_corticalis_2
+                                             |  +--| (24)
+                                             |  |  |   +--Cryptoderma_fortunei
+                                             |  |  +---| (100)
+                                             |  |      +--Cryptoderma_formosense
+                                             +--| (40)
+                                                |   +--Scyphophorus_yuccae
+                                                +---| (100)
+                                                    +--Scyphophorus_acupunctatus
+
+
+Consensus tree in newick format: 
+
+(Euplatypus_hintzi:0.0133182701,Euplatypus_parallelus:0.0556520374,(((((((((Dynamis_borassi:0.0258424393,(Rhynchophorus_cruentatus_1:0.0550055420,Cyrtotrachelus_thompsoni:0.0000020294)98:0.0091148601)96:0.0103887821,((Rhynchophorus_palmarumUSNM:0.0145700295,(Rhynchophorus_palmarum_2:0.0058401397,Rhynchophorus_palmarum_1:0.0000022997)100:0.0229170038)91:0.0300410838,Rhynchophorus_ferrugineus:0.0814768484)84:0.0056584396)98:0.0275229083,Rhynchophorus_cruentatus_2:0.0338661323)93:0.0053752289,Rhynchophorus_phoenicis:0.0867130596)100:0.0930292463,Cosmoplites_sordidus:0.0749698638)68:0.0033656151,Prodioctes_formosanus:0.0546181756)89:0.0499738438,((Rhabdoscelus_obscurus:0.1174602590,(((((((Metamasius_callizona:0.0202295573,Metamasius_sp_USNM:0.0090527206)100:0.0158598041,((Sphenophorus_brunnipennis_1:0.0000022997,Sphenophorus_brunnipennis_2:0.0014763880)100:0.0213918310,Sphenophorus_venatus:0.0357753866)96:0.0088450645)94:0.0084007747,(Sphenophorus_sp_1:0.0388948283,Sphenophorus_sp_2:0.0000020294)94:0.0131379662)66:0.0057531652,((Cactophagus_sp_1:0.0308165696,((Rhodobaenus_cf_nawardii:0.0180596711,Rhodobaenus_nigrofasciatus:0.0037112746)95:0.0065919638,Cactophagus_sp_2:0.0076884817)75:0.0028878420)68:0.0026422264,(Cactophagus_spinolae:0.0088058708,Tapinostethus:0.0210358130)29:0.0042054546)38:0.0000026931)39:0.0089751427,Metamasius_distortus:0.0237561655)66:0.0092693994,Metamasius_hemipterus:0.0598655491)90:0.0165805668,Acantharhinus_carinatus:0.0409962376)100:0.0652493306)63:0.0059849570,Poteriophorus_uhlemanni:0.0899907146)90:0.0444629399)45:0.0259936584,(((Polytus_mellerborgii:0.0595122841,Diocalandra_frumenti:0.1729714246)99:0.0410354386,((Sitophilus_linearis:0.0057506639,Sitophilus_lineatus:0.0026398415)100:0.0116707705,(((((Sitophilus_oryzae:0.0000022997,Sitophilus_granarius_3:0.0010506998)91:0.0002023935,Sitophilus_granarius_4:0.0000020294)95:0.0013801050,(Sitophilus_zeamais:0.0072680972,Tryphetus_incarnatus:0.0097388815)55:0.0029358007)56:0.0069448105,(Sitophilus_granarius_1:0.0067046435,Sitophilus_granarius_2:0.0059795661)99:0.0031603543)89:0.0026911864,Sitophilus_sp_:0.0141235012)51:0.0058352619)99:0.0634250692)94:0.0248538080,Trigonotarsus_rugosus:0.1580030730)65:0.0138513906):0.0025826369,((((((Orthognathus_lividus:0.0932522386,Mesocordylus_bracteolatus:0.0591154628)100:0.0526788990,(Sipalinus_gigas:0.0000026684,Sipalinus_gigas_2:0.0000024924)98:0.0953716264)76:0.0269394805,(((Rhinostomus_barbirostrisUSNM:0.0003034741,Rhinostomus_barbirostris_2:0.0314434566)95:0.1104183054,(Yuccaborus_frontalis:0.1260799129,Rhinostomus_barbirostris:0.2575186565)83:0.0247544854)80:0.0219370386,Rhinostomus_nigra:0.3182652935)62:0.0535726400)85:0.0472591516,(Nephius_sp_:0.1553625207,((Orthosinus:0.0269698318,(Stromboscerini_gen__sp_1:0.0000022631,Stromboscerini_gen__sp_2:0.0000020294)100:0.0318663563)98:0.0266486496,(Dryophthorus_corticalisUSNM:0.0214361673,(Dryophthorus_corticalis_1:0.0000020294,Dryophthorus_corticalis_2:0.0008288301)49:0.0047393440)100:0.0560076846)99:0.0523542709)96:0.0298071701)86:0.0499750831,(Cryptoderma_fortunei:0.0013966650,Cryptoderma_formosense:0.0035832341)100:0.1420683464)24:0.0000026160,(Scyphophorus_yuccae:0.0000025675,Scyphophorus_acupunctatus:0.0126118542)100:0.1538210874)40:0.0096848343)29:1.5069452413)100;
+
+TIME STAMP
+----------
+
+Date and time: Mon Jun  8 18:17:17 2020
+Total CPU time used: 150.527184 seconds (0h:2m:30s)
+Total wall-clock time used: 80.93844331 seconds (0h:1m:20s)
+
