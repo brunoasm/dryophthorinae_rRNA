@@ -11,9 +11,9 @@ Alignment and uncalibrated Bayesian tree by M. Lourdes Chamorro and other code b
 ### Code
 This folder contains code used in the analyses
 
-* `1-IQTREE`: bash call to IQTREE, input alignment and partitions
-* `2-partitionfinder`: input alignment and configuration file to PartitionFinder
-* `3-mrbayes`: Inferences in MrBayes, including uncalibrated tree, node dating (ND) and fossilized birth-death (FBD). For the latter 2, we include scripts used to run mrbayes and also to produce summary trees.
+* `1-IQTREE`: bash call to IQTREE, input alignments and partitions. MUSCLE and structural alignments in different folders.
+* `2-partitionfinder`: input alignment and configuration file to PartitionFinder. MUSCLE and structural alignments in different folders.
+* `3-mrbayes`: Inferences in MrBayes, including uncalibrated tree, node dating (ND) and fossilized birth-death (FBD). For the latter 2, we include scripts used to run mrbayes and also to produce summary trees. MUSCLE and structural alignments in different folders in the case of uncalibrated analyses.
 * `4-figure`: R code used to produce the figure with calibrated analyses, including html file with R code and output.
 
 ### Results
@@ -23,6 +23,7 @@ Results for `4-figure` are included in the Rmarkdown output.
 
 Included folders
 
-* `1-IQTREE`: output files from IQTREE, including tree and best partition scheme
-* `2-partitionfinder`: output files from PartitionFinder, including best partition scheme
-* `3-mrbayes`: Summary trees obtained from Mrbayes, including posterior distribution for calibrated trees.
+* `1-IQTREE`: output files from IQTREE, including tree and best partition scheme. MUSCLE and structural alignments in different folders.
+* `2-partitionfinder`: output files from PartitionFinder, including best partition scheme. MUSCLE and structural alignments in different folders.
+* `3-mrbayes`: Summary trees obtained from Mrbayes, including posterior distribution with 10000 trees. MUSCLE and structural alignments in different folders in the case of uncalibrated analyses.
+
