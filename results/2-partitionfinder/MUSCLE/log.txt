@@ -1,0 +1,49 @@
+INFO     | 2019-06-28 13:56:55,562 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2019-06-28 13:56:55,571 | config     | Setting 'alignment' to 'Dryophthorinae.phy'
+INFO     | 2019-06-28 13:56:55,572 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2019-06-28 13:56:55,573 | parser     | You set 'models' to: mrbayes
+INFO     | 2019-06-28 13:56:55,645 | model_load | This analysis will use the following 24 models of molecular evolution
+INFO     | 2019-06-28 13:56:55,646 | model_load | JC, K80, SYM, F81, HKY, GTR, JC+G, K80+G, SYM+G, F81+G, HKY+G, GTR+G, JC+I, K80+I, SYM+I, F81+I, HKY+I, GTR+I, JC+I+G, K80+I+G, SYM+I+G, F81+I+G, HKY+I+G, GTR+I+G
+INFO     | 2019-06-28 13:56:55,647 | config     | Setting 'model_selection' to 'bic'
+INFO     | 2019-06-28 13:56:55,655 | config     | Setting 'search' to 'greedy'
+INFO     | 2019-06-28 13:56:55,656 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2019-06-28 13:56:55,656 | config     | Looking for alignment file './Dryophthorinae.phy'...
+INFO     | 2019-06-28 13:56:55,676 | threadpool | Using 4 cpus
+INFO     | 2019-06-28 13:56:55,677 | analysis   | Beginning Analysis
+WARNING  | 2019-06-28 13:56:55,678 | analysis   | Deleting all previous workings in './analysis'
+INFO     | 2019-06-28 13:56:55,800 | alignment  | Reading alignment file './Dryophthorinae.phy'
+INFO     | 2019-06-28 13:56:55,966 | analysis   | Starting tree will be estimated from the data.
+INFO     | 2019-06-28 13:56:55,968 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2019-06-28 13:56:55,970 | raxml      | Using a separate GTR+G model for each data block
+INFO     | 2019-06-28 13:57:46,465 | raxml      | Estimating GTR+G branch lengths on ML tree using all partitions
+INFO     | 2019-06-28 13:57:55,425 | raxml      | ML topology estimation finished
+INFO     | 2019-06-28 13:57:55,428 | analysis_m | Performing Greedy Analysis
+INFO     | 2019-06-28 13:57:55,428 | analysis_m |    *** Analysing starting scheme ***
+INFO     | 2019-06-28 14:00:03,956 | progress   |       Finished subset 1/2, 50.00 percent done
+INFO     | 2019-06-28 14:01:30,730 | progress   |       Finished subset 2/2, 100.00 percent done
+INFO     | 2019-06-28 14:01:30,735 | analysis_m |    ***Greedy algorithm step 1***
+INFO     | 2019-06-28 14:01:30,740 | analysis_m |       Analysing 1 new subset pairs
+INFO     | 2019-06-28 14:04:42,246 | progress   |       Finished subset 1/1, 100.00 percent done
+INFO     | 2019-06-28 14:04:42,248 | analysis_m |       Finding the best partitioning scheme
+INFO     | 2019-06-28 14:04:42,250 | analysis_m |       Found no schemes that improve the score, stopping
+INFO     | 2019-06-28 14:04:42,250 | analysis_m |    Greedy algorithm finished after 1 steps
+INFO     | 2019-06-28 14:04:42,250 | analysis_m |    Best scoring scheme is scheme start_scheme, with bic score of 41173.037
+INFO     | 2019-06-28 14:04:42,251 | model_util |    Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2019-06-28 14:04:42,253 | model_util |    
+INFO     | 2019-06-28 14:04:42,253 | model_util |    
+INFO     | 2019-06-28 14:04:42,254 | model_util |    *Citations for this analysis*
+INFO     | 2019-06-28 14:04:42,254 | model_util |    -----------------------------
+INFO     | 2019-06-28 14:04:42,254 | model_util |    
+INFO     | 2019-06-28 14:04:42,254 | model_util |    If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2019-06-28 14:04:42,254 | model_util |    
+INFO     | 2019-06-28 14:04:42,254 | model_util |    For the version of PartitionFinder you used, please cite:
+INFO     | 2019-06-28 14:04:42,273 | model_util |    Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2019-06-28 14:04:42,274 | model_util |    
+INFO     | 2019-06-28 14:04:42,274 | model_util |    For the greedy algorithm you used, please cite:
+INFO     | 2019-06-28 14:04:42,275 | model_util |    Lanfear, R., Calcott, B., Ho, S. Y., & Guindon, S. (2012). PartitionFinder: combined selection of partitioning schemes and substitution models for phylogenetic analyses. Molecular biology and evolution, 29(6), 1695-1701.
+INFO     | 2019-06-28 14:04:42,276 | model_util |    
+INFO     | 2019-06-28 14:04:42,276 | model_util |    Your analysis also used PhyML, so please cite:
+INFO     | 2019-06-28 14:04:42,276 | model_util |    Guindon, S., Dufayard, J. F., Lefort, V., Anisimova, M., Hordijk, W., & Gascuel, O. (2010). New algorithms and methods to estimate maximum-likelihood phylogenies: assessing the performance of PhyML 3.0. Systematic biology, 59(3), 307-321.
+INFO     | 2019-06-28 14:04:42,280 | model_util |    
+INFO     | 2019-06-28 14:04:42,292 | main       | Total processing time: 0:07:47 (h:m:s)
+INFO     | 2019-06-28 14:04:42,293 | main       | Processing complete.

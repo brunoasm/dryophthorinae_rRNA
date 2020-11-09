@@ -1,0 +1,277 @@
+IQ-TREE multicore version 2.0.3 for Linux 64-bit built Apr 26 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    holy7c24602.rc.fas.harvard.edu (AVX512, FMA3, 188 GB RAM)
+Command: iqtree -T 2 -s Dryophthorinae.phy -p partitions -m MFP+MERGE -B 1000 --prefix Dryophthorinae -o Euplatypus,Euplatypus_2
+Seed:    162930 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Nov  2 14:49:23 2020
+Kernel:  AVX+FMA - 2 threads (2 CPU cores detected)
+
+Reading partition model file partitions ...
+Reading alignment file Dryophthorinae.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+WARNING: 337 sites contain only gaps or ambiguous characters.
+Alignment has 64 sequences with 3840 columns, 1492 distinct patterns
+791 parsimony-informative, 343 singleton sites, 2706 constant sites
+                  Gap/Ambiguity  Composition  p-value
+   1  Diocalandra        83.57%    passed     74.23%
+   2  Rhinostomus        72.63%    passed     25.25%
+   3  Rhinostomus_2      81.09%    passed      5.64%
+   4  Rhynchophorus      85.62%    passed     14.51%
+   5  Metamasius         85.39%    passed     33.03%
+   6  Cosmoplites        82.92%    passed      8.07%
+   7  Rhynchophorus_2    82.73%    passed      9.21%
+   8  Dynamis            83.62%    passed     17.58%
+   9  Euplatypus         34.56%    failed      0.00%
+  10  Cactophagus        87.79%    failed      0.32%
+  11  Rhynchophorus_3    55.70%    passed      7.90%
+  12  Rhodobaenus        82.92%    passed      7.79%
+  13  Rhodobaenus_2      84.22%    failed      1.13%
+  14  Sphenophorus       36.77%    passed     72.74%
+  15  Tryphetus          49.04%    passed     74.25%
+  16  Euplatypus_2       28.96%    failed      0.00%
+  17  Rhynchophorus_4    73.83%    passed     64.65%
+  18  Rhinostomus_3      63.20%    passed      5.51%
+  19  Sphenophorus_2     25.29%    passed     75.02%
+  20  Sphenophorus_3     23.62%    passed     79.91%
+  21  Rhynchophorus_5    38.12%    passed     83.02%
+  22  Poteriophorus      49.51%    passed     83.65%
+  23  Rhynchophorus_6    24.43%    passed     95.56%
+  24  Trigonotarsus      54.77%    passed     99.07%
+  25  Rhynchophorus_7    45.08%    passed     27.84%
+  26  Prodioctes         49.48%    passed     77.18%
+  27  Yuccaborus         30.47%    failed      0.40%
+  28  Dryophthorus       26.46%    passed     83.48%
+  29  Dryophthorus_2     51.04%    passed     39.27%
+  30  Rhinostomus_4      49.17%    passed      5.75%
+  31  Metamasius_2       33.80%    passed     58.33%
+  32  Cryptoderma        55.89%    passed     33.00%
+  33  Cryptoderma_2      20.96%    passed     77.07%
+  34  Orthognathus       22.34%    passed     37.11%
+  35  Sitophilus         32.99%    passed     98.00%
+  36  Cyrtotrachelus     82.58%    passed     40.92%
+  37  Nephius            24.01%    passed     74.82%
+  38  Metamasius_3       23.07%    passed     58.55%
+  39  Acantharhinus      23.20%    passed     60.58%
+  40  Dryophthorus_3     76.74%    passed     40.71%
+  41  Polytus            25.99%    passed     99.53%
+  42  Orthosinus         25.49%    passed     53.54%
+  43  Mesocordylus       31.93%    passed     93.40%
+  44  Metamasius_4       23.31%    passed     69.01%
+  45  Cactophagus_2      48.83%    passed     95.00%
+  46  Stromboscerini     36.74%    passed     64.78%
+  47  Stromboscerini_2   60.65%    passed     71.42%
+  48  Sphenophorus_4     75.08%    passed     20.89%
+  49  Cactophagus_3      59.38%    failed      2.08%
+  50  Sphenophorus_5     63.62%    failed      2.73%
+  51  Tapinostethus      83.88%    passed      6.30%
+  52  Sipalinus          23.72%    passed     25.38%
+  53  Sipalinus_2        84.66%    passed      8.38%
+  54  Scyphophorus       83.85%    passed     27.43%
+  55  Scyphophorus_2     83.36%    passed     42.47%
+  56  Rhabdoscelus       83.57%    failed      0.61%
+  57  Sitophilus_2       74.45%    passed      8.32%
+  58  Sitophilus_3       82.89%    passed     14.67%
+  59  Sitophilus_4       26.22%    passed     85.34%
+  60  Sitophilus_5       34.27%    passed     82.82%
+  61  Sitophilus_6       32.45%    passed     92.54%
+  62  Sitophilus_7       85.76%    passed      7.38%
+  63  Sitophilus_8       49.82%    passed     92.49%
+  64  Sitophilus_9       33.57%    passed     83.33%
+WARNING: 31 sequences contain more than 50% gaps/ambiguity
+****  TOTAL              53.61%  8 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Partition file is not in NEXUS format, assuming RAxML-style partition file...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1	DNA	53	1590	466	970	GTR+MERGE	LSU_RNA
+2	DNA	47	2250	325	1736	GTR+MERGE	SSU_RNA
+Degree of missing data: 0.227
+Info: multi-threading strategy over partitions
+
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.013 seconds
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Initial log-likelihood: -23441.126
+Current log-likelihood at step 1: -21660.078
+Current log-likelihood at step 2: -21580.831
+Current log-likelihood at step 3: -21577.364
+Parameters optimization took 2 rounds (0.526 sec)
+
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+Initial log-likelihood: -21488.974
+Current log-likelihood at step 1: -21486.836
+Current log-likelihood at step 2: -21485.572
+Current log-likelihood at step 3: -21484.595
+Partition-specific rates:  1.231 0.837
+Parameters optimization took 2 rounds (0.202 sec)
+
+Time for fast ML tree search: 1.087 seconds
+
+NOTE: ModelFinder requires 30 MB RAM!
+Selecting individual models for 2 charsets using BIC...
+ No. Model        Score       TreeLen     Charset
+   1 GTR+F+I+G4   21777.213   4.788       LSU_RNA
+   2 GTR+F+I+G4   21354.888   2.967       SSU_RNA
+Full partition model BIC score: 44171.080 (LnL: -21483.055  df:146)
+Merging models to increase model fit (about 3 total partition schemes)...
+   3 GTR+F+I+G4   44541.078   4.160       LSU_RNA+SSU_RNA
+Agglomerative model selection: (LSU_RNA,SSU_RNA)
+   4 TIM2e+I+G4   21339.087   SSU_RNA
+   5 TIM3e+G4     21695.482   LSU_RNA
+Best partition model BIC score: 44065.585 (LnL: -21475.700  df:135)
+Partition information was printed to Dryophthorinae.best_scheme.nex
+Partition information in Raxml format was printed to Dryophthorinae.best_scheme
+
+All model information printed to Dryophthorinae.model.gz
+CPU time for ModelFinder: 101.088 seconds (0h:1m:41s)
+Wall-clock time for ModelFinder: 83.064 seconds (0h:1m:23s)
+Generating 1000 samples for ultrafast bootstrap (seed: 162930)...
+
+NOTE: 15 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -21492.541
+Current log-likelihood at step 1: -21475.036
+Current log-likelihood at step 2: -21474.334
+Current log-likelihood at step 3: -21474.299
+Partition-specific rates:  1.310 0.781
+Parameters optimization took 2 rounds (0.191 sec)
+
+Computing ML distances based on estimated model parameters... 0.132 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.074 seconds
+Log-likelihood of BIONJ tree: -22922.090
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.327 second
+Computing log-likelihood of 98 initial trees ... 1.550 seconds
+Current best score: -21474.299
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -21473.964
+Current log-likelihood at step 1: -21473.940
+Parameters optimization took 0 rounds (0.040 sec)
+
+BETTER TREE FOUND at iteration 1: -21473.940
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -21473.732
+Current log-likelihood at step 1: -21473.629
+Current log-likelihood at step 2: -21473.549
+Parameters optimization took 1 rounds (0.083 sec)
+
+BETTER TREE FOUND at iteration 2: -21473.549
+Iteration 10 / LogL: -21474.608 / Time: 0h:0m:8s
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -21472.610
+Current log-likelihood at step 1: -21472.449
+Current log-likelihood at step 2: -21472.442
+Parameters optimization took 1 rounds (0.089 sec)
+
+BETTER TREE FOUND at iteration 19: -21472.442
+Iteration 20 / LogL: -21472.451 / Time: 0h:0m:14s
+Finish initializing candidate tree set (20)
+Current best tree score: -21472.442 / CPU time: 13.985
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -21471.382
+Current log-likelihood at step 1: -21471.290
+Parameters optimization took 0 rounds (0.049 sec)
+
+BETTER TREE FOUND at iteration 21: -21471.290
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -21470.575
+Current log-likelihood at step 1: -21470.347
+Current log-likelihood at step 2: -21470.287
+Parameters optimization took 1 rounds (0.103 sec)
+
+BETTER TREE FOUND at iteration 24: -21470.287
+Iteration 30 / LogL: -21491.756 / Time: 0h:0m:20s (0h:1m:7s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -21470.253
+Current log-likelihood at step 1: -21470.217
+Parameters optimization took 0 rounds (0.040 sec)
+
+BETTER TREE FOUND at iteration 32: -21470.217
+Iteration 40 / LogL: -21470.280 / Time: 0h:0m:26s (0h:1m:3s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -21470.200
+Current log-likelihood at step 1: -21470.172
+Parameters optimization took 0 rounds (0.040 sec)
+
+UPDATE BEST LOG-LIKELIHOOD: -21470.172
+Iteration 50 / LogL: -21472.507 / Time: 0h:0m:32s (0h:0m:53s left)
+Log-likelihood cutoff on original alignment: -21530.917
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -21469.598
+Current log-likelihood at step 1: -21469.575
+Parameters optimization took 0 rounds (0.039 sec)
+
+BETTER TREE FOUND at iteration 51: -21469.575
+Iteration 60 / LogL: -21470.159 / Time: 0h:0m:37s (0h:0m:58s left)
+Iteration 70 / LogL: -21471.072 / Time: 0h:0m:43s (0h:0m:51s left)
+Iteration 80 / LogL: -21469.787 / Time: 0h:0m:49s (0h:0m:44s left)
+Iteration 90 / LogL: -21472.269 / Time: 0h:0m:55s (0h:0m:37s left)
+Iteration 100 / LogL: -21470.263 / Time: 0h:0m:59s (0h:0m:30s left)
+Log-likelihood cutoff on original alignment: -21530.917
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Iteration 110 / LogL: -21470.151 / Time: 0h:1m:5s (0h:0m:53s left)
+Iteration 120 / LogL: -21472.057 / Time: 0h:1m:10s (0h:0m:47s left)
+Iteration 130 / LogL: -21469.578 / Time: 0h:1m:15s (0h:0m:40s left)
+Iteration 140 / LogL: -21470.172 / Time: 0h:1m:20s (0h:0m:34s left)
+Iteration 150 / LogL: -21471.192 / Time: 0h:1m:25s (0h:0m:28s left)
+Log-likelihood cutoff on original alignment: -21530.917
+TREE SEARCH COMPLETED AFTER 152 ITERATIONS / Time: 0h:1m:26s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -21469.575
+Current log-likelihood at step 1: -21469.559
+Current log-likelihood at step 2: -21469.548
+Current log-likelihood at step 3: -21469.541
+Partition-specific rates:  1.326 0.769
+Parameters optimization took 2 rounds (0.118 sec)
+
+Partition information was printed to Dryophthorinae.best_model.nex
+BEST SCORE FOUND : -21469.541
+Creating bootstrap support values...
+Split supports printed to NEXUS file Dryophthorinae.splits.nex
+Total tree length: 4.531
+
+Total number of iterations: 152
+CPU time used for tree search: 165.943 sec (0h:2m:45s)
+Wall-clock time used for tree search: 86.270 sec (0h:1m:26s)
+Total CPU time used: 167.226 sec (0h:2m:47s)
+Total wall-clock time used: 87.320 sec (0h:1m:27s)
+
+Computing bootstrap consensus tree...
+Reading input file Dryophthorinae.splits.nex...
+64 taxa and 460 splits.
+Consensus tree written to Dryophthorinae.contree
+Reading input trees file Dryophthorinae.contree
+Log-likelihood of consensus tree: -21470.113
+
+Analysis results written to: 
+  IQ-TREE report:                Dryophthorinae.iqtree
+  Maximum-likelihood tree:       Dryophthorinae.treefile
+  Likelihood distances:          Dryophthorinae.mldist
+  Best partitioning scheme:      Dryophthorinae.best_scheme.nex
+           in RAxML format:      Dryophthorinae.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Dryophthorinae.splits.nex
+  Consensus tree:                Dryophthorinae.contree
+  Screen log file:               Dryophthorinae.log
+
+Date and Time: Mon Nov  2 14:52:14 2020

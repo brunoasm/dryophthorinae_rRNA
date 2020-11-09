@@ -1,5 +1,6 @@
 #NEXUS
-[written by B. de Medeiros 14-Mar-2019. Alignment and partitions defined by L. Chamorro, merged with partitionfinder2 (also used for model selection)]
+[written by B. de Medeiros starting on 14-Mar-2019. Alignment and partitions defined by L. Chamorro, merged with partitionfinder2 (also used for model selection)]
+[Does not include fossils from Legalov 2020 in the matrix since they do not make a difference for analyses. These were added to FBD during review]
 
 BEGIN TAXA;
     DIMENSIONS NTAX=85;
@@ -199,10 +200,10 @@ prset applyto=(7) statefreqpr=fixed(equal);
  
     [calibrations]
     calibrate
-     Dryophthorinae = offsetlognormal(35, 60, 1.5) [high probability throughout Baltic amber interval, extending a bit to the past]
+     Dryophthorinae = offsetlognormal(48.6, 60.8, 1.5) [high probability throughout 48.6-55.8, extending a bit to the past]
      Dryophthorini = offsetlognormal(15, 25, 1.5) [high probability throughout Dominican amber interval, extending a bit to the past]
      Rhynchophorini_part = offsetlognormal(33, 40 ,1.5) [oldest Sphenophorina fossil assigned to this group]
-     all = truncatednormal(47.8, 139.4, 7.45) [from Toussaint et al, 2016; split of Dryophthoridae-Platypodinae]
+     all = truncatednormal(48.6, 139.4, 7.45) [from Toussaint et al, 2016; split of Dryophthoridae-Platypodinae]
 ;
     delete Sphenophorus_aequalis ;
     delete fossils ; [we do not need fossil tips for node dating]
@@ -215,7 +216,6 @@ prset applyto=(7) statefreqpr=fixed(equal);
     prset nodeagepr = calibrated;
     prset clockratepr = exp(1000) clockvarpr=igr igrvarpr=exp(5000);
     prset topologypr = constraints(all, Rhynchophorini_part, Sphenophorina1, Sphenophorina2, Sphenophorina3, Litosomina, Litosominiplus, Rhynchophorina, Dryophthorini, Stromboscerini, Dryophthorus, Mesocordylus, Dryophthorinae, Stenommatus, Orthoplus);
-    [prset treeagepr = truncatednormal(47.8, 139.4, 7.45); [from Toussaint et al, 2016; split of Dryophthoridae-Platypodinae]]
     
     mcmcp temp=0.025 ngen=10000000 diagnfreq=1000 relburnin=yes burninfrac=0.25 printfreq=1000 samplefreq=1000 checkfreq=500000 savebrlens=yes;
     [mcmcp append=yes;] [to continue analysis when interrupted]

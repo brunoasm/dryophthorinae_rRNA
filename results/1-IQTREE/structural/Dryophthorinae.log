@@ -1,0 +1,405 @@
+IQ-TREE multicore version 2.0.3 for Linux 64-bit built Apr 26 2020
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    holy7c26502.rc.fas.harvard.edu (AVX512, FMA3, 188 GB RAM)
+Command: iqtree -T 2 -s Dryophthorinae.phy -p partitions -m MFP+MERGE -B 1000 --prefix Dryophthorinae -o Euplatypus_hintzi,Euplatypus_parallelus
+Seed:    358741 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Jun  8 18:15:33 2020
+Kernel:  AVX+FMA - 2 threads (2 CPU cores detected)
+
+Reading partition model file partitions ...
+Reading alignment file Dryophthorinae.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+WARNING: 375 sites contain only gaps or ambiguous characters.
+Alignment has 64 sequences with 3764 columns, 1349 distinct patterns
+746 parsimony-informative, 284 singleton sites, 2734 constant sites
+                              Gap/Ambiguity  Composition  p-value
+   1  Euplatypus_hintzi              27.52%    failed      0.00%
+   2  Euplatypus_parallelus          33.24%    failed      0.00%
+   3  Dynamis_borassi                83.29%    passed     17.60%
+   4  Rhynchophorus_cruentatus_1     43.97%    passed     27.94%
+   5  Rhynchophorus_cruentatus_2     82.39%    passed      9.23%
+   6  Rhynchophorus_phoenicis        85.33%    passed     14.53%
+   7  Orthognathus_lividus           20.78%    passed     37.19%
+   8  Mesocordylus_bracteolatus      30.55%    passed     93.42%
+   9  Rhinostomus_barbirostrisUSNM   72.08%    passed     25.19%
+  10  Rhinostomus_barbirostris_2     80.71%    passed      5.63%
+  11  Sipalinus_gigas                22.18%    passed     25.30%
+  12  Yuccaborus_frontalis           29.06%    failed      0.40%
+  13  Rhabdoscelus_obscurus          83.24%    failed      0.62%
+  14  Polytus_mellerborgii           24.50%    passed     99.53%
+  15  Scyphophorus_yuccae            83.53%    passed     27.47%
+  16  Scyphophorus_acupunctatus      83.02%    passed     42.53%
+  17  Metamasius_callizona           85.10%    passed     33.06%
+  18  Cactophagus_sp_1               58.55%    failed      2.09%
+  19  Sphenophorus_brunnipennis_1    23.78%    passed     75.13%
+  20  Sphenophorus_brunnipennis_2    22.08%    passed     80.02%
+  21  Sphenophorus_sp_1              62.89%    failed      2.74%
+  22  Sphenophorus_venatus           35.49%    passed     72.78%
+  23  Rhodobaenus_cf_nawardii        82.57%    passed      7.82%
+  24  Rhodobaenus_nigrofasciatus     83.90%    failed      1.13%
+  25  Metamasius_distortus           21.76%    passed     69.14%
+  26  Metamasius_sp_USNM             21.52%    passed     58.69%
+  27  Metamasius_hemipterus          32.47%    passed     58.42%
+  28  Sitophilus_linearis            31.64%    passed     98.04%
+  29  Sitophilus_oryzae              85.47%    passed      7.39%
+  30  Sitophilus_granarius_1         24.73%    passed     85.37%
+  31  Sitophilus_granarius_2         32.94%    passed     82.93%
+  32  Sitophilus_granarius_3         32.23%    passed     83.43%
+  33  Sitophilus_zeamais             31.08%    passed     92.62%
+  34  Sitophilus_sp_                 82.55%    passed     14.70%
+  35  Diocalandra_frumenti           83.24%    passed     74.20%
+  36  Cryptoderma_fortunei           54.99%    passed     33.08%
+  37  Cryptoderma_formosense         19.37%    passed     77.19%
+  38  Sitophilus_lineatus            73.94%    passed      8.34%
+  39  Rhynchophorus_palmarumUSNM     22.90%    passed     95.61%
+  40  Cactophagus_sp_2               87.54%    failed      0.32%
+  41  Rhynchophorus_palmarum_1       36.88%    passed     83.03%
+  42  Cosmoplites_sordidus           82.57%    passed      8.08%
+  43  Nephius_sp_                    22.48%    passed     74.83%
+  44  Orthosinus                     23.99%    passed     53.56%
+  45  Dryophthorus_corticalisUSNM    24.97%    passed     83.48%
+  46  Acantharhinus_carinatus        21.65%    passed     60.64%
+  47  Stromboscerini_gen__sp_1       35.47%    passed     64.87%
+  48  Rhynchophorus_palmarum_2       54.81%    passed      7.92%
+  49  Rhynchophorus_ferrugineus      73.30%    passed     64.59%
+  50  Rhinostomus_nigra              62.46%    passed      5.50%
+  51  Trigonotarsus_rugosus          53.85%    passed     99.06%
+  52  Stromboscerini_gen__sp_2       59.86%    passed     71.30%
+  53  Dryophthorus_corticalis_1      76.28%    passed     40.69%
+  54  Dryophthorus_corticalis_2      50.05%    passed     39.18%
+  55  Sitophilus_granarius_4         48.80%    passed     92.46%
+  56  Prodioctes_formosanus          48.46%    passed     77.07%
+  57  Cactophagus_spinolae           47.79%    passed     94.99%
+  58  Sphenophorus_sp_2              74.57%    passed     20.94%
+  59  Tapinostethus                  83.55%    passed      6.28%
+  60  Poteriophorus_uhlemanni        48.49%    passed     83.58%
+  61  Tryphetus_incarnatus           48.01%    passed     74.19%
+  62  Sipalinus_gigas_2              84.35%    passed      8.36%
+  63  Cyrtotrachelus_thompsoni       82.23%    passed     40.93%
+  64  Rhinostomus_barbirostris       48.14%    passed      5.72%
+WARNING: 31 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                          52.67%  8 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Partition file is not in NEXUS format, assuming RAxML-style partition file...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1	DNA	45	543	124	391	GTR+MERGE	LSU_RNA
+2	DNA	46	48	0	41	GTR+MERGE	Primer
+WARNING: No parsimony-informative sites in partition Primer
+3	DNA	48	383	183	175	GTR+MERGE	STEM
+4	DNA	48	119	36	71	GTR+MERGE	LOOP
+5	DNA	48	395	69	283	GTR+MERGE	RAA
+6	DNA	48	18	8	9	GTR+MERGE	RSC
+7	DNA	47	45	23	11	GTR+MERGE	REC
+8	DNA	45	930	73	808	GTR+MERGE	SSU_RNA
+9	DNA	47	683	67	573	GTR+MERGE	STEM18S
+10	DNA	47	414	54	334	GTR+MERGE	LOOP18S
+11	DNA	37	118	74	22	GTR+MERGE	REC_18S
+12	DNA	43	16	4	6	GTR+MERGE	RAA_18S
+13	DNA	37	52	31	10	GTR+MERGE	RSC_18S
+Degree of missing data: 0.282
+Info: multi-threading strategy over partitions
+
+
+NOTE: Restoring information from model checkpoint file Dryophthorinae.model.gz
+
+CHECKPOINT: Initial tree restored
+Perform fast likelihood tree search using GTR+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Initial log-likelihood: -21349.949
+Current log-likelihood at step 1: -19300.814
+Current log-likelihood at step 2: -19034.659
+Current log-likelihood at step 3: -18910.079
+Current log-likelihood at step 4: -18873.726
+Current log-likelihood at step 5: -18855.125
+Current log-likelihood at step 6: -18848.886
+Current log-likelihood at step 7: -18846.061
+Parameters optimization took 6 rounds (0.836 sec)
+
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+Initial log-likelihood: -18828.105
+Current log-likelihood at step 1: -18825.595
+Current log-likelihood at step 2: -18823.979
+Current log-likelihood at step 3: -18822.776
+Current log-likelihood at step 4: -18821.849
+Partition-specific rates:  0.338 0.054 0.901 0.395 3.701 1.717 3.341 0.085 0.216 0.195 5.852 25.782 2.552
+Parameters optimization took 3 rounds (0.314 sec)
+
+Time for fast ML tree search: 1.525 seconds
+
+NOTE: ModelFinder requires 8 MB RAM!
+Selecting individual models for 13 charsets using BIC...
+ No. Model        Score       TreeLen     Charset
+   1 GTR+F+I+G4   7930.776    4.649       STEM
+   2 GTR+F+I+G4   5226.036    1.112       STEM18S
+   3 GTR+F+I+G4   5061.560    1.721       LSU_RNA
+   4 GTR+F+I+G4   2943.759    1.025       LOOP18S
+   5 GTR+F+I+G4   3641.511    19.585      RAA
+   6 GTR+F+I+G4   3534.823    28.839      REC_18S
+   7 GTR+F+I+G4   1497.726    2.039       LOOP
+   8 GTR+F+I+G4   1125.324    17.184      REC
+   9 GTR+F+I+G4   5382.685    0.437       SSU_RNA
+  10 GTR+F+I+G4   290.037     0.265       Primer	0h:0m:0s (0h:0m:2s left)
+  11 GTR+F+I+G4   964.131     11.375      RSC_18S	0h:0m:0s (0h:0m:1s left)
+  12 GTR+F+I+G4   387.098     8.788       RSC	0h:0m:0s (0h:0m:1s left)
+  13 GTR+F+I+G4   361.994     121.822     RAA_18S	0h:0m:0s (0h:0m:1s left)
+Full partition model BIC score: 39836.748 (LnL: -18819.237  df:267)
+Merging models to increase model fit (about 157 total partition schemes)...
+  14 GTR+F+I+G4   40020.811   2.561       STEM+STEM18S	0h:0m:0s (0h:0m:3s left)
+  15 GTR+F+I+G4   40129.741   2.085       STEM+SSU_RNA	0h:0m:0s (0h:0m:5s left)
+  16 GTR+F+I+G4   39804.411   0.740       SSU_RNA+STEM18S	0h:0m:0s (0h:0m:6s left)
+  17 GTR+F+I+G4   39870.985   2.985       LSU_RNA+STEM	0h:0m:0s (0h:0m:6s left)
+  18 GTR+F+I+G4   39915.406   3.567       STEM+LOOP18S	0h:0m:0s (0h:0m:7s left)
+  19 GTR+F+I+G4   39858.499   1.074       LSU_RNA+SSU_RNA	0h:0m:1s (0h:0m:8s left)
+  20 GTR+F+I+G4   39854.938   1.597       LSU_RNA+STEM18S	0h:0m:1s (0h:0m:8s left)
+  21 GTR+F+I+G4   39992.531   7.908       STEM+RAA	0h:0m:1s (0h:0m:8s left)
+  22 GTR+F+I+G4   39800.942   0.571       SSU_RNA+LOOP18S	0h:0m:1s (0h:0m:9s left)
+  23 GTR+F+I+G4   39829.157   1.074       STEM18S+LOOP18S	0h:0m:1s (0h:0m:9s left)
+  24 GTR+F+I+G4   40216.664   3.200       RAA+STEM18S	0h:0m:1s (0h:0m:10s left)
+  25 GTR+F+I+G4   40275.552   3.228       RAA+SSU_RNA	0h:0m:2s (0h:0m:11s left)
+  26 GTR+F+I+G4   39813.254   1.730       LSU_RNA+LOOP18S	0h:0m:2s (0h:0m:10s left)
+  27 GTR+F+I+G4   40133.110   12.841      STEM+REC_18S	0h:0m:2s (0h:0m:11s left)
+  28 GTR+F+I+G4   40135.151   4.954       LSU_RNA+RAA	0h:0m:2s (0h:0m:11s left)
+  29 GTR+F+I+G4   39788.605   4.083       STEM+LOOP	0h:0m:2s (0h:0m:10s left)
+  30 GTR+F+I+G4   40433.384   2.993       SSU_RNA+REC_18S	0h:0m:2s (0h:0m:11s left)
+  31 GTR+F+I+G4   39838.343   0.688       LOOP+SSU_RNA	0h:0m:2s (0h:0m:10s left)
+  32 GTR+F+I+G4   40020.733   7.150       RAA+LOOP18S	0h:0m:2s (0h:0m:10s left)
+  33 GTR+F+I+G4   40314.593   3.352       STEM18S+REC_18S	0h:0m:2s (0h:0m:10s left)
+  34 GTR+F+I+G4   39838.024   1.387       LOOP+STEM18S	0h:0m:2s (0h:0m:10s left)
+  35 GTR+F+I+G4   39861.251   5.609       STEM+REC	0h:0m:2s (0h:0m:10s left)
+  36 GTR+F+I+G4   39861.448   6.008       STEM+RSC_18S	0h:0m:3s (0h:0m:10s left)
+  37 GTR+F+I+G4   40016.303   1.396       REC+SSU_RNA	0h:0m:3s (0h:0m:10s left)
+  38 GTR+F+I+G4   39805.047   4.113       Primer+STEM	0h:0m:3s (0h:0m:10s left)
+  39 GTR+F+I+G4   40037.995   0.952       SSU_RNA+RSC_18S	0h:0m:3s (0h:0m:9s left)
+  40 GTR+F+I+G4   39802.705   1.761       LSU_RNA+LOOP	0h:0m:3s (0h:0m:9s left)
+  41 GTR+F+I+G4   40364.265   6.680       LSU_RNA+REC_18S	0h:0m:3s (0h:0m:9s left)
+  42 GTR+F+I+G4   39792.102   4.767       STEM+RSC	0h:0m:3s (0h:0m:9s left)
+  43 GTR+F+I+G4   39763.467   0.474       Primer+SSU_RNA	0h:0m:3s (0h:0m:9s left)
+  44 GTR+F+I+G4   39786.709   5.931       STEM+RAA_18S	0h:0m:3s (0h:0m:9s left)
+  45 GTR+F+I+G4   39931.369   1.913       REC+STEM18S	0h:0m:3s (0h:0m:9s left)
+  46 GTR+F+I+G4   39944.454   1.524       STEM18S+RSC_18S	0h:0m:3s (0h:0m:9s left)
+  47 GTR+F+I+G4   39818.980   0.668       RSC+SSU_RNA	0h:0m:3s (0h:0m:9s left)
+  48 GTR+F+I+G4   39860.125   0.678       SSU_RNA+RAA_18S	0h:0m:4s (0h:0m:9s left)
+  49 GTR+F+I+G4   39792.007   1.468       LOOP+LOOP18S	0h:0m:4s (0h:0m:9s left)
+  50 GTR+F+I+G4   39771.304   1.198       Primer+STEM18S	0h:0m:4s (0h:0m:9s left)
+  51 GTR+F+I+G4   40220.100   5.443       LOOP18S+REC_18S	0h:0m:4s (0h:0m:9s left)
+  52 GTR+F+I+G4   39915.179   27.339      RAA+REC_18S	0h:0m:4s (0h:0m:9s left)
+  53 GTR+F+I+G4   39951.264   2.714       LSU_RNA+REC	0h:0m:4s (0h:0m:8s left)
+  54 GTR+F+I+G4   39879.291   11.570      LOOP+RAA	0h:0m:4s (0h:0m:8s left)
+  55 GTR+F+I+G4   39805.494   1.368       RSC+STEM18S	0h:0m:4s (0h:0m:8s left)
+  56 GTR+F+I+G4   39973.420   2.679       LSU_RNA+RSC_18S	0h:0m:4s (0h:0m:8s left)
+  57 GTR+F+I+G4   39777.167   1.600       LSU_RNA+Primer	0h:0m:4s (0h:0m:8s left)
+  58 GTR+F+I+G4   39813.156   1.222       STEM18S+RAA_18S	0h:0m:4s (0h:0m:8s left)
+  59 GTR+F+I+G4   39811.929   1.876       LSU_RNA+RSC	0h:0m:5s (0h:0m:8s left)
+  60 GTR+F+I+G4   39822.172   2.626       LSU_RNA+RAA_18S	0h:0m:5s (0h:0m:8s left)
+  61 GTR+F+I+G4   39938.159   2.003       LOOP18S+RSC_18S	0h:0m:5s (0h:0m:8s left)
+  62 GTR+F+I+G4   39911.193   2.799       REC+LOOP18S	0h:0m:5s (0h:0m:7s left)
+  63 GTR+F+I+G4   39791.121   18.784      RAA+REC	0h:0m:5s (0h:0m:7s left)
+  64 GTR+F+I+G4   39821.735   18.956      RAA+RSC_18S	0h:0m:5s (0h:0m:7s left)
+  65 GTR+F+I+G4   39893.679   13.810      Primer+RAA	0h:0m:5s (0h:0m:7s left)
+  66 GTR+F+I+G4   39764.614   1.015       Primer+LOOP18S	0h:0m:5s (0h:0m:7s left)
+  67 GTR+F+I+G4   39798.634   1.571       RSC+LOOP18S	0h:0m:5s (0h:0m:7s left)
+  68 GTR+F+I+G4   40077.203   14.746      LOOP+REC_18S	0h:0m:5s (0h:0m:7s left)
+  69 GTR+F+I+G4   39763.707   18.499      RAA+RSC	0h:0m:5s (0h:0m:6s left)
+  70 GTR+F+I+G4   39818.396   1.842       LOOP18S+RAA_18S	0h:0m:5s (0h:0m:6s left)
+  71 GTR+F+I+G4   39771.806   22.497      RAA+RAA_18S	0h:0m:5s (0h:0m:6s left)
+  72 GTR+F+I+G4   39783.899   30.587      REC+REC_18S	0h:0m:5s (0h:0m:6s left)
+  73 GTR+F+I+G4   39793.228   23.635      REC_18S+RSC_18S	0h:0m:5s (0h:0m:6s left)
+  74 GTR+F+I+G4   39852.978   4.725       LOOP+REC	0h:0m:5s (0h:0m:6s left)
+  75 GTR+F+I+G4   39874.532   4.783       LOOP+RSC_18S	0h:0m:5s (0h:0m:6s left)
+  76 GTR+F+I+G4   39775.688   1.489       Primer+LOOP	0h:0m:5s (0h:0m:6s left)
+  77 GTR+F+I+G4   40003.415   20.681      Primer+REC_18S	0h:0m:5s (0h:0m:5s left)
+  78 GTR+F+I+G4   39776.546   2.675       LOOP+RSC	0h:0m:5s (0h:0m:5s left)
+  79 GTR+F+I+G4   39819.024   32.115      RSC+REC_18S	0h:0m:5s (0h:0m:5s left)
+  80 GTR+F+I+G4   39788.890   28.694      REC_18S+RAA_18S	0h:0m:5s (0h:0m:5s left)
+  81 GTR+F+I+G4   39790.285   4.422       LOOP+RAA_18S	0h:0m:5s (0h:0m:5s left)
+  82 GTR+F+I+G4   39764.108   16.806      REC+RSC_18S	0h:0m:5s (0h:0m:5s left)
+  83 GTR+F+I+G4   39863.747   4.399       Primer+REC	0h:0m:5s (0h:0m:5s left)
+  84 GTR+F+I+G4   39780.663   14.337      RSC+REC	0h:0m:5s (0h:0m:5s left)
+  85 GTR+F+I+G4   39870.403   5.507       Primer+RSC_18S	0h:0m:5s (0h:0m:5s left)
+  86 GTR+F+I+G4   39773.986   12.746      RSC+RSC_18S	0h:0m:5s (0h:0m:4s left)
+  87 GTR+F+I+G4   39762.950   20.468      REC+RAA_18S	0h:0m:5s (0h:0m:4s left)
+  88 GTR+F+I+G4   39774.434   13.562      RAA_18S+RSC_18S	0h:0m:5s (0h:0m:4s left)
+  89 GTR+F+I+G4   39803.064   1.851       Primer+RSC	0h:0m:5s (0h:0m:4s left)
+  90 GTR+F+I+G4   39788.356   4.642       Primer+RAA_18S	0h:0m:5s (0h:0m:4s left)
+  91 GTR+F+I+G4   39775.536   15.279      RSC+RAA_18S	0h:0m:5s (0h:0m:4s left)
+6 compatible better partition pairs found
+Merging REC+RAA_18S with BIC score: 39762.950 (LnL: -18827.621  df: 256)
+Merging Primer+SSU_RNA with BIC score: 39689.669 (LnL: -18836.263  df: 245)
+Merging RAA+RSC with BIC score: 39616.628 (LnL: -18845.025  df: 234)
+Merging STEM+LOOP with BIC score: 39568.485 (LnL: -18866.236  df: 223)
+Merging REC_18S+RSC_18S with BIC score: 39524.965 (LnL: -18889.759  df: 212)
+Merging LSU_RNA+LOOP18S with BIC score: 39501.471 (LnL: -18923.295  df: 201)
+  92 GTR+F+I+G4   39544.098   5.925       STEM+LOOP+REC+RAA_18S	0h:0m:6s (0h:0m:4s left)
+  93 GTR+F+I+G4   39652.257   2.766       LSU_RNA+REC+LOOP18S+RAA_18S	0h:0m:6s (0h:0m:4s left)
+  94 GTR+F+I+G4   39572.401   2.994       LSU_RNA+STEM+LOOP+LOOP18S	0h:0m:6s (0h:0m:4s left)
+  95 GTR+F+I+G4   39675.599   6.840       STEM+LOOP+RAA+RSC	0h:0m:6s (0h:0m:4s left)
+  96 GTR+F+I+G4   39886.626   11.161      STEM+LOOP+REC_18S+RSC_18S	0h:0m:6s (0h:0m:4s left)
+  97 GTR+F+I+G4   39817.834   2.081       Primer+STEM+LOOP+SSU_RNA	0h:0m:7s (0h:0m:4s left)
+  98 GTR+F+I+G4   39702.653   2.623       STEM+LOOP+STEM18S	0h:0m:7s (0h:0m:4s left)
+  99 GTR+F+I+G4   39834.546   4.518       LSU_RNA+RAA+RSC+LOOP18S	0h:0m:7s (0h:0m:4s left)
+ 100 GTR+F+I+G4   39462.292   21.081      RAA+RSC+REC+RAA_18S	0h:0m:7s (0h:0m:4s left)
+ 101 GTR+F+I+G4   40175.769   5.034       LSU_RNA+LOOP18S+REC_18S+RSC_18S	0h:0m:7s (0h:0m:4s left)
+ 102 GTR+F+I+G4   39520.686   1.515       LSU_RNA+STEM18S+LOOP18S	0h:0m:8s (0h:0m:4s left)
+ 103 GTR+F+I+G4   39450.994   27.074      REC+REC_18S+RAA_18S+RSC_18S	0h:0m:8s (0h:0m:4s left)
+ 104 GTR+F+I+G4   39514.929   1.072       LSU_RNA+Primer+SSU_RNA+LOOP18S	0h:0m:8s (0h:0m:4s left)
+ 105 GTR+F+I+G4   39725.074   1.680       Primer+REC+SSU_RNA+RAA_18S	0h:0m:8s (0h:0m:4s left)
+ 106 GTR+F+I+G4   39630.645   2.147       REC+STEM18S+RAA_18S	0h:0m:8s (0h:0m:4s left)
+ 107 GTR+F+I+G4   39581.056   24.641      RAA+RSC+REC_18S+RSC_18S	0h:0m:8s (0h:0m:3s left)
+ 108 GTR+F+I+G4   39912.509   3.191       RAA+RSC+STEM18S	0h:0m:8s (0h:0m:3s left)
+ 109 GTR+F+I+G4   39978.690   3.197       Primer+RAA+RSC+SSU_RNA	0h:0m:9s (0h:0m:4s left)
+ 110 GTR+F+I+G4   40240.130   3.420       Primer+SSU_RNA+REC_18S+RSC_18S	0h:0m:9s (0h:0m:3s left)
+ 111 GTR+F+I+G4   40084.306   3.828       STEM18S+REC_18S+RSC_18S	0h:0m:9s (0h:0m:3s left)
+ 112 GTR+F+I+G4   39472.493   0.816       Primer+SSU_RNA+STEM18S	0h:0m:9s (0h:0m:3s left)
+2 compatible better partition pairs found
+Merging REC+REC_18S+RAA_18S+RSC_18S with BIC score: 39450.994 (LnL: -18943.340  df: 190)
+Merging Primer+SSU_RNA+STEM18S with BIC score: 39422.016 (LnL: -18974.133  df: 179)
+ 113 GTR+F+I+G4   39842.053   11.571      STEM+LOOP+REC+REC_18S+RAA_18S+RSC_18S	0h:0m:10s (0h:0m:3s left)
+ 114 GTR+F+I+G4   40184.201   5.227       LSU_RNA+REC+LOOP18S+REC_18S+RAA_18S+RSC_18S	0h:0m:10s (0h:0m:3s left)
+ 115 GTR+F+I+G4   39493.855   23.931      RAA+RSC+REC+REC_18S+RAA_18S+RSC_18S	0h:0m:10s (0h:0m:3s left)
+ 116 GTR+F+I+G4   39754.019   1.772       Primer+STEM+LOOP+SSU_RNA+STEM18S	0h:0m:10s (0h:0m:3s left)
+ 117 GTR+F+I+G4   39450.068   1.132       LSU_RNA+Primer+SSU_RNA+STEM18S+LOOP18S	0h:0m:10s (0h:0m:3s left)
+ 118 GTR+F+I+G4   39925.131   2.036       Primer+RAA+RSC+SSU_RNA+STEM18S	0h:0m:11s (0h:0m:3s left)
+ 119 GTR+F+I+G4   40332.984   2.943       Primer+REC+SSU_RNA+STEM18S+REC_18S+RAA_18S+RSC_18S	0h:0m:11s (0h:0m:3s left)
+Agglomerative model selection: ((LSU_RNA,LOOP18S)6:39501.5,((Primer,SSU_RNA)2:39689.7,STEM18S)8:39422,(STEM,LOOP)4:39568.5,(RAA,RSC)3:39616.6,((REC,RAA_18S)1:39762.9,(REC_18S,RSC_18S)5:39525)7:39451)
+Merging into 5 partitions...
+ 120 TIM3+F+I+G4  8004.557    LSU_RNA+LOOP18S	0h:0m:13s (0h:0m:4s left)
+ 121 K2P+G4       9351.113    STEM+LOOP	0h:0m:16s (0h:0m:4s left)
+ 122 TIM3e+R3     10820.297   Primer+SSU_RNA+STEM18S	0h:0m:18s (0h:0m:5s left)
+ 123 HKY+F+G4     3990.121    RAA+RSC	0h:0m:19s (0h:0m:5s left)
+ 124 HKY+F        5954.700    REC+REC_18S+RAA_18S+RSC_18S	0h:0m:21s (0h:0m:5s left)
+Best partition model BIC score: 39193.835 (LnL: -18958.842  df:155)
+Partition information was printed to Dryophthorinae.best_scheme.nex
+Partition information in Raxml format was printed to Dryophthorinae.best_scheme
+
+All model information printed to Dryophthorinae.model.gz
+CPU time for ModelFinder: 42.193 seconds (0h:0m:42s)
+Wall-clock time for ModelFinder: 22.717 seconds (0h:0m:22s)
+Generating 1000 samples for ultrafast bootstrap (seed: 358741)...
+
+NOTE: 14 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -18968.877
+Current log-likelihood at step 1: -18956.939
+Current log-likelihood at step 2: -18956.446
+Current log-likelihood at step 3: -18956.383
+Partition-specific rates:  0.312 0.122 0.947 4.084 4.769
+Parameters optimization took 2 rounds (0.205 sec)
+
+Computing ML distances based on estimated model parameters... 0.292 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.022 seconds
+Log-likelihood of BIONJ tree: -20216.160
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.298 second
+Computing log-likelihood of 98 initial trees ... 1.865 seconds
+Current best score: -18956.383
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -18949.629
+Current log-likelihood at step 1: -18949.513
+Current log-likelihood at step 2: -18949.484
+Parameters optimization took 1 rounds (0.120 sec)
+
+BETTER TREE FOUND at iteration 1: -18949.484
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -18922.862
+Current log-likelihood at step 1: -18922.482
+Current log-likelihood at step 2: -18922.415
+Parameters optimization took 1 rounds (0.139 sec)
+
+BETTER TREE FOUND at iteration 2: -18922.415
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -18921.373
+Current log-likelihood at step 1: -18920.999
+Current log-likelihood at step 2: -18920.911
+Parameters optimization took 1 rounds (0.144 sec)
+
+BETTER TREE FOUND at iteration 3: -18920.911
+Iteration 10 / LogL: -18922.980 / Time: 0h:0m:9s
+Iteration 20 / LogL: -18936.848 / Time: 0h:0m:15s
+Finish initializing candidate tree set (20)
+Current best tree score: -18920.911 / CPU time: 14.765
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -18920.217
+Current log-likelihood at step 1: -18920.153
+Parameters optimization took 0 rounds (0.057 sec)
+
+BETTER TREE FOUND at iteration 21: -18920.153
+Iteration 30 / LogL: -18920.582 / Time: 0h:0m:20s (0h:1m:5s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -18920.055
+Current log-likelihood at step 1: -18920.035
+Parameters optimization took 0 rounds (0.060 sec)
+
+BETTER TREE FOUND at iteration 37: -18920.035
+Iteration 40 / LogL: -18920.227 / Time: 0h:0m:26s (0h:1m:5s left)
+Iteration 50 / LogL: -18920.347 / Time: 0h:0m:31s (0h:0m:56s left)
+Log-likelihood cutoff on original alignment: -18979.044
+Iteration 60 / LogL: -18923.987 / Time: 0h:0m:36s (0h:0m:48s left)
+Iteration 70 / LogL: -18920.411 / Time: 0h:0m:42s (0h:0m:41s left)
+Iteration 80 / LogL: -18920.507 / Time: 0h:0m:48s (0h:0m:34s left)
+Iteration 90 / LogL: -18920.151 / Time: 0h:0m:53s (0h:0m:28s left)
+Iteration 100 / LogL: -18921.073 / Time: 0h:0m:58s (0h:0m:22s left)
+Log-likelihood cutoff on original alignment: -18979.044
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.997
+Iteration 110 / LogL: -18920.125 / Time: 0h:1m:4s (0h:0m:53s left)
+Iteration 120 / LogL: -18920.760 / Time: 0h:1m:10s (0h:0m:47s left)
+Iteration 130 / LogL: -18920.055 / Time: 0h:1m:16s (0h:0m:41s left)
+TREE SEARCH COMPLETED AFTER 138 ITERATIONS / Time: 0h:1m:20s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -18920.035
+Current log-likelihood at step 1: -18920.021
+Current log-likelihood at step 2: -18920.008
+Current log-likelihood at step 3: -18919.997
+Current log-likelihood at step 4: -18919.987
+Partition-specific rates:  0.309 0.118 0.905 4.174 4.736
+Parameters optimization took 3 rounds (0.196 sec)
+
+Partition information was printed to Dryophthorinae.best_model.nex
+BEST SCORE FOUND : -18919.987
+Creating bootstrap support values...
+Split supports printed to NEXUS file Dryophthorinae.splits.nex
+Total tree length: 5.774
+
+Total number of iterations: 138
+CPU time used for tree search: 148.895 sec (0h:2m:28s)
+Wall-clock time used for tree search: 79.615 sec (0h:1m:19s)
+Total CPU time used: 150.527 sec (0h:2m:30s)
+Total wall-clock time used: 80.658 sec (0h:1m:20s)
+
+Computing bootstrap consensus tree...
+Reading input file Dryophthorinae.splits.nex...
+64 taxa and 477 splits.
+Consensus tree written to Dryophthorinae.contree
+Reading input trees file Dryophthorinae.contree
+Log-likelihood of consensus tree: -18920.286
+
+Analysis results written to: 
+  IQ-TREE report:                Dryophthorinae.iqtree
+  Maximum-likelihood tree:       Dryophthorinae.treefile
+  Likelihood distances:          Dryophthorinae.mldist
+  Best partitioning scheme:      Dryophthorinae.best_scheme.nex
+           in RAxML format:      Dryophthorinae.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          Dryophthorinae.splits.nex
+  Consensus tree:                Dryophthorinae.contree
+  Screen log file:               Dryophthorinae.log
+
+Date and Time: Mon Jun  8 18:17:17 2020

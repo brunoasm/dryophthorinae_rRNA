@@ -1,0 +1,8 @@
+#nexus
+begin sets;
+  charset LSU_RNA = 1-1590;
+  charset SSU_RNA = 1591-3840;
+  charpartition mymodels =
+    TIM3e{0.577606,2.02079,2.8562}+FQ+G4{0.334539}: LSU_RNA{5.15832},
+    TIM2e{0.547569,0.841035,2.08881}+FQ+I{0.505242}+G4{0.195326}: SSU_RNA{2.91557};
+end;

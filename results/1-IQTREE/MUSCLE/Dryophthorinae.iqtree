@@ -1,0 +1,383 @@
+IQ-TREE 2.0.3 built Apr 26 2020
+
+Partition file name: partitions
+Input file name: Dryophthorinae.phy
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 162930
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst. Biol., 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 64 taxa with 2 partitions and 3840 total sites (22.6807% missing data)
+
+  ID  Name     Type	Seq	Site	Unique	Infor	Invar	Const
+   1  LSU_RNA  DNA	53	1590	745	466	970	970
+   2  SSU_RNA  DNA	47	2250	752	325	1736	1736
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM3e+G4:LSU_RNA,TIM2e+I+G4:SSU_RNA
+
+List of best-fit models per partition:
+
+  ID  Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+   1  TIM3e+G4         -10829.312   21668.625 + 6.95e-310   21668.662 + 4.64e-310   21695.482 + 6.95e-310
+   2  TIM2e+I+G4       -10646.387   21304.775 + 6.95e-310   21304.812 + 4.64e-310   21339.087 + 6.95e-310
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model with separate substitution models and separate rates across sites
+
+  ID  Model           Speed  Parameters
+   1  TIM3e+G4       1.3263  TIM3e{0.577606,2.02079,2.8562}+FQ+G4{0.334539}
+   2  TIM2e+I+G4     0.7694  TIM2e{0.547569,0.841035,2.08881}+FQ+I{0.505242}+G4{0.195326}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -21469.5414 (s.e. 513.6658)
+Unconstrained log-likelihood (without tree): -20694.9778
+Number of free parameters (#branches + #model parameters): 135
+Akaike information criterion (AIC) score: 43209.0828
+Corrected Akaike information criterion (AICc) score: 43218.9964
+Bayesian information criterion (BIC) score: 44053.2685
+
+Total tree length (sum of branch lengths): 4.5306
+Sum of internal branch lengths: 2.0750 (45.7984% of tree length)
+
+WARNING: 2 near-zero internal branches (<0.0003) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Euplatypus' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
+                                                    +-----Diocalandra
+                                                 +--| (79)
+                                                 |  |  +--Tryphetus
+                                                 |  +--| (95)
+                                                 |     +---Polytus
+                                              +--| (79)
+                                              |  |     +--Sitophilus
+                                              |  |  +--| (100)
+                                              |  |  |  +--Sitophilus_2
+                                              |  +--| (100)
+                                              |     |     +--Sitophilus_3
+                                              |     |  +--| (77)
+                                              |     |  |  |     +--Sitophilus_4
+                                              |     |  |  |  +--| (98)
+                                              |     |  |  |  |  +--Sitophilus_5
+                                              |     |  |  +--| (91)
+                                              |     |  |     |  +--Sitophilus_6
+                                              |     |  |     +--| (98)
+                                              |     |  |        |  +**Sitophilus_7
+                                              |     |  |        +--| (95)
+                                              |     |  |           +**Sitophilus_9
+                                              |     +--| (91)
+                                              |        +--Sitophilus_8
+                                           +--| (62)
+                                           |  +---Trigonotarsus
++------------------------------------------| (100)
+|                                          |                          +--Rhinostomus
+|                                          |                       +--| (87)
+|                                          |                       |  +--Rhinostomus_2
+|                                          |                    +--| (74)
+|                                          |                    |  |  +---Yuccaborus
+|                                          |                    |  +--| (66)
+|                                          |                    |     +------Rhinostomus_4
+|                                          |                 +--| (28)
+|                                          |                 |  |  +**Sipalinus
+|                                          |                 |  +--| (98)
+|                                          |                 |     +**Sipalinus_2
+|                                          |              +--| (26)
+|                                          |              |  |  +---Orthognathus
+|                                          |              |  +--| (99)
+|                                          |              |     +--Mesocordylus
+|                                          |           +**| (64)
+|                                          |           |  +----------Rhinostomus_3
+|                                          |        +--| (74)
+|                                          |        |  |        +--Dryophthorus
+|                                          |        |  |     +--| (100)
+|                                          |        |  |     |  |  +--Dryophthorus_2
+|                                          |        |  |     |  +**| (65)
+|                                          |        |  |     |     +**Dryophthorus_3
+|                                          |        |  |  +--| (99)
+|                                          |        |  |  |  |  +--Orthosinus
+|                                          |        |  |  |  +--| (99)
+|                                          |        |  |  |     |  +**Stromboscerini
+|                                          |        |  |  |     +--| (100)
+|                                          |        |  |  |        +**Stromboscerini_2
+|                                          |        |  +--| (93)
+|                                          |        |     +----Nephius
+|                                          |     +--| (23)
+|                                          |     |  |  +--Scyphophorus
+|                                          |     |  +--| (100)
+|                                          |     |     +--Scyphophorus_2
+|                                          |  +--| (44)
+|                                          |  |  |                             +--Metamasius
+|                                          |  |  |                          +--| (99)
+|                                          |  |  |                          |  +--Metamasius_3
+|                                          |  |  |                       +--| (56)
+|                                          |  |  |                       |  +--Metamasius_2
+|                                          |  |  |                    +--| (79)
+|                                          |  |  |                    |  |  +--Sphenophorus
+|                                          |  |  |                    |  +--| (59)
+|                                          |  |  |                    |     |  +**Sphenophorus_2
+|                                          |  |  |                    |     +--| (100)
+|                                          |  |  |                    |        +--Sphenophorus_3
+|                                          |  |  |                 +--| (59)
+|                                          |  |  |                 |  |  +--Sphenophorus_5
+|                                          |  |  |                 |  +--| (100)
+|                                          |  |  |                 |     +**Sphenophorus_4
+|                                          |  |  |              +--| (42)
+|                                          |  |  |              |  |  +**Cactophagus_2
+|                                          |  |  |              |  +--| (100)
+|                                          |  |  |              |     +--Tapinostethus
+|                                          |  |  |           +--| (57)
+|                                          |  |  |           |  |     +--Cactophagus
+|                                          |  |  |           |  |  +--| (97)
+|                                          |  |  |           |  |  |  |  +--Rhodobaenus
+|                                          |  |  |           |  |  |  +--| (100)
+|                                          |  |  |           |  |  |     +--Rhodobaenus_2
+|                                          |  |  |           |  +--| (57)
+|                                          |  |  |           |     +--Cactophagus_3
+|                                          |  |  |        +--| (96)
+|                                          |  |  |        |  +--Metamasius_4
+|                                          |  |  |     +--| (99)
+|                                          |  |  |     |  +--Acantharhinus
+|                                          |  |  |  +--| (70)
+|                                          |  |  |  |  +--Poteriophorus
+|                                          |  |  +--| (94)
+|                                          |  |     +---Rhabdoscelus
+|                                          +--| (42)
+|                                             |              +--Rhynchophorus
+|                                             |           +--| (76)
+|                                             |           |  |  +--Rhynchophorus_2
+|                                             |           |  +--| (81)
+|                                             |           |     |     +--Dynamis
+|                                             |           |     |  +--| (94)
+|                                             |           |     |  |  |  +--Rhynchophorus_7
+|                                             |           |     |  |  +--| (76)
+|                                             |           |     |  |     +--Rhynchophorus_4
+|                                             |           |     +--| (87)
+|                                             |           |        |     +--Rhynchophorus_3
+|                                             |           |        |  +--| (93)
+|                                             |           |        |  |  +**Rhynchophorus_5
+|                                             |           |        +--| (87)
+|                                             |           |           +--Rhynchophorus_6
+|                                             |        +--| (99)
+|                                             |        |  +**Cyrtotrachelus
+|                                             |     +--| (93)
+|                                             |     |  +--Prodioctes
+|                                             |  +--| (99)
+|                                             |  |  +--Cosmoplites
+|                                             +--| (48)
+|                                                |   +--Cryptoderma
+|                                                +---| (100)
+|                                                    +--Cryptoderma_2
+|
++--Euplatypus
+|
++--Euplatypus_2
+
+Tree in newick format:
+
+(((((Diocalandra:0.1385421038,(Tryphetus:0.0563844253,Polytus:0.0898814513)95:0.0131529117)79:0.0263041478,((Sitophilus:0.0071983761,Sitophilus_2:0.0048604453)100:0.0095129694,((Sitophilus_3:0.0103411970,((Sitophilus_4:0.0098654905,Sitophilus_5:0.0064303153)98:0.0012476020,(Sitophilus_6:0.0266191572,(Sitophilus_7:0.0000010000,Sitophilus_9:0.0000026587)95:0.0045571462)98:0.0066703885)91:0.0033868097)77:0.0004726052,Sitophilus_8:0.0024816004)91:0.0076741607)100:0.0548113438)79:0.0158393469,Trigonotarsus:0.0952506685)62:0.0047093333,(((((((((Rhinostomus:0.0117299083,Rhinostomus_2:0.0416703175)87:0.0807794547,(Yuccaborus:0.0929960168,Rhinostomus_4:0.1698413359)66:0.0215244563)74:0.0551340994,(Sipalinus:0.0000021860,Sipalinus_2:0.0000024049)98:0.0726401734)28:0.0169346344,(Orthognathus:0.0898151871,Mesocordylus:0.0760404188)99:0.0371689778)26:0.0415396850,Rhinostomus_3:0.2431344001)64:0.0000027395,(((Dryophthorus:0.0123414319,(Dryophthorus_2:0.0251130187,Dryophthorus_3:0.0000010000)65:0.0000021977)100:0.0454051808,(Orthosinus:0.0417933611,(Stromboscerini:0.0000024293,Stromboscerini_2:0.0000010000)100:0.0247294505)99:0.0230763563)99:0.0421680076,Nephius:0.1147299985)93:0.0162550601)74:0.0272049012,(Scyphophorus:0.0026529146,Scyphophorus_2:0.0044151940)100:0.0822686646)23:0.0035511310,((((((((((Metamasius:0.0225873021,Metamasius_3:0.0070187350)99:0.0211996240,Metamasius_2:0.0453172404)56:0.0079583451,(Sphenophorus:0.0340221978,(Sphenophorus_2:0.0000019982,Sphenophorus_3:0.0010943748)100:0.0223132216)59:0.0054731035)79:0.0076598648,(Sphenophorus_5:0.0441950130,Sphenophorus_4:0.0000023883)100:0.0068889839)59:0.0020714171,(Cactophagus_2:0.0000024780,Tapinostethus:0.0180423057)100:0.0190547104)42:0.0015358105,((Cactophagus:0.0118895127,(Rhodobaenus:0.0132968360,Rhodobaenus_2:0.0042151097)100:0.0053803664)97:0.0024850508,Cactophagus_3:0.0201180317)57:0.0025355084)57:0.0043589411,Metamasius_4:0.0207620563)96:0.0187861947,Acantharhinus:0.0385069673)99:0.0362353836,Poteriophorus:0.0762272942)70:0.0071272287,Rhabdoscelus:0.1064689158)94:0.0319044201)44:0.0120932177,(((((Rhynchophorus:0.0690821574,(Rhynchophorus_2:0.0273861400,((Dynamis:0.0193919002,(Rhynchophorus_7:0.0529535232,Rhynchophorus_4:0.0545581050)76:0.0011780985)94:0.0097362931,((Rhynchophorus_3:0.0036595389,Rhynchophorus_5:0.0000010000)93:0.0008463328,Rhynchophorus_6:0.0344784145)87:0.0277000938)87:0.0222449646)81:0.0029545853)76:0.0086734025,Cyrtotrachelus:0.0000028680)99:0.0330659462,Prodioctes:0.0771807221)93:0.0157369470,Cosmoplites:0.0816672367)99:0.0394437096,(Cryptoderma:0.0008099161,Cryptoderma_2:0.0030555445)100:0.0873638273)48:0.0155485119)42:0.0055320568)100:0.9530683391,Euplatypus:0.0829595884,Euplatypus_2:0.0086421554);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -21470.112558
+Robinson-Foulds distance between ML tree and consensus tree: 6
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
+                                                     +-----Diocalandra
+                                                  +--| (79)
+                                                  |  |  +--Tryphetus
+                                                  |  +--| (95)
+                                                  |     +---Polytus
+                                               +--| (79)
+                                               |  |     +--Sitophilus
+                                               |  |  +--| (100)
+                                               |  |  |  +--Sitophilus_2
+                                               |  +--| (100)
+                                               |     |     +--Sitophilus_3
+                                               |     |  +--| (77)
+                                               |     |  |  |     +--Sitophilus_4
+                                               |     |  |  |  +--| (98)
+                                               |     |  |  |  |  +--Sitophilus_5
+                                               |     |  |  +--| (91)
+                                               |     |  |     |  +--Sitophilus_6
+                                               |     |  |     +--| (98)
+                                               |     |  |        |  +--Sitophilus_7
+                                               |     |  |        +--| (95)
+                                               |     |  |           +--Sitophilus_9
+                                               |     +--| (91)
+                                               |        +--Sitophilus_8
+                                            +--| (62)
+                                            |  +---Trigonotarsus
++-------------------------------------------| (42)
+|                                           |                          +--Rhinostomus
+|                                           |                       +--| (87)
+|                                           |                       |  +--Rhinostomus_2
+|                                           |                    +--| (74)
+|                                           |                    |  |  +---Yuccaborus
+|                                           |                    |  +--| (66)
+|                                           |                    |     +------Rhinostomus_4
+|                                           |                 +--| (31)
+|                                           |                 |  +---------Rhinostomus_3
+|                                           |              +--| (47)
+|                                           |              |  |  +--Sipalinus
+|                                           |              |  +--| (98)
+|                                           |              |     +--Sipalinus_2
+|                                           |           +--| (64)
+|                                           |           |  |  +---Orthognathus
+|                                           |           |  +--| (99)
+|                                           |           |     +--Mesocordylus
+|                                           |        +--| (74)
+|                                           |        |  |        +--Dryophthorus
+|                                           |        |  |     +--| (100)
+|                                           |        |  |     |  |  +--Dryophthorus_2
+|                                           |        |  |     |  +--| (65)
+|                                           |        |  |     |     +--Dryophthorus_3
+|                                           |        |  |  +--| (99)
+|                                           |        |  |  |  |  +--Orthosinus
+|                                           |        |  |  |  +--| (99)
+|                                           |        |  |  |     |  +--Stromboscerini
+|                                           |        |  |  |     +--| (100)
+|                                           |        |  |  |        +--Stromboscerini_2
+|                                           |        |  +--| (93)
+|                                           |        |     +----Nephius
+|                                           |     +--| (23)
+|                                           |     |  |  +--Scyphophorus
+|                                           |     |  +--| (100)
+|                                           |     |     +--Scyphophorus_2
+|                                           |  +--|
+|                                           |  |  |                          +--Metamasius
+|                                           |  |  |                       +--| (99)
+|                                           |  |  |                       |  +--Metamasius_3
+|                                           |  |  |                    +--| (56)
+|                                           |  |  |                    |  +--Metamasius_2
+|                                           |  |  |                 +--| (79)
+|                                           |  |  |                 |  |  +--Sphenophorus
+|                                           |  |  |                 |  +--| (59)
+|                                           |  |  |                 |     |  +--Sphenophorus_2
+|                                           |  |  |                 |     +--| (100)
+|                                           |  |  |                 |        +--Sphenophorus_3
+|                                           |  |  |              +--| (59)
+|                                           |  |  |              |  |  +--Sphenophorus_5
+|                                           |  |  |              |  +--| (100)
+|                                           |  |  |              |     +--Sphenophorus_4
+|                                           |  |  |           +--| (57)
+|                                           |  |  |           |  |        +--Cactophagus
+|                                           |  |  |           |  |     +--| (97)
+|                                           |  |  |           |  |     |  |  +--Rhodobaenus
+|                                           |  |  |           |  |     |  +--| (100)
+|                                           |  |  |           |  |     |     +--Rhodobaenus_2
+|                                           |  |  |           |  |  +--| (57)
+|                                           |  |  |           |  |  |  +--Cactophagus_3
+|                                           |  |  |           |  +--| (43)
+|                                           |  |  |           |     |  +--Cactophagus_2
+|                                           |  |  |           |     +--| (100)
+|                                           |  |  |           |        +--Tapinostethus
+|                                           |  |  |        +--| (96)
+|                                           |  |  |        |  +--Metamasius_4
+|                                           |  |  |     +--| (99)
+|                                           |  |  |     |  +--Acantharhinus
+|                                           |  |  |  +--| (70)
+|                                           |  |  |  |  +--Poteriophorus
+|                                           |  |  +--| (94)
+|                                           |  |     +---Rhabdoscelus
+|                                           +--| (44)
+|                                              |              +--Rhynchophorus
+|                                              |           +--| (76)
+|                                              |           |  |  +--Rhynchophorus_2
+|                                              |           |  +--| (81)
+|                                              |           |     |     +--Dynamis
+|                                              |           |     |  +--| (94)
+|                                              |           |     |  |  |  +--Rhynchophorus_7
+|                                              |           |     |  |  +--| (76)
+|                                              |           |     |  |     +--Rhynchophorus_4
+|                                              |           |     +--| (87)
+|                                              |           |        |     +--Rhynchophorus_3
+|                                              |           |        |  +--| (93)
+|                                              |           |        |  |  +--Rhynchophorus_5
+|                                              |           |        +--| (87)
+|                                              |           |           +--Rhynchophorus_6
+|                                              |        +--| (99)
+|                                              |        |  +--Cyrtotrachelus
+|                                              |     +--| (93)
+|                                              |     |  +--Prodioctes
+|                                              |  +--| (99)
+|                                              |  |  +--Cosmoplites
+|                                              +--| (48)
+|                                                 |   +--Cryptoderma
+|                                                 +---| (100)
+|                                                     +--Cryptoderma_2
+| (100)
++--Euplatypus
+|
++--Euplatypus_2
+
+
+Consensus tree in newick format: 
+
+(((((Diocalandra:0.1388246170,(Tryphetus:0.0562679617,Polytus:0.0900914591)95:0.0128677735)79:0.0263156772,((Sitophilus:0.0071895879,Sitophilus_2:0.0048647099)100:0.0095141651,((Sitophilus_3:0.0103472803,((Sitophilus_4:0.0098666191,Sitophilus_5:0.0064310720)98:0.0012412511,(Sitophilus_6:0.0266219814,(Sitophilus_7:0.0000022285,Sitophilus_9:0.0000021321)95:0.0045573828)98:0.0066712298)91:0.0033908779)77:0.0004586502,Sitophilus_8:0.0024911397)91:0.0076830204)100:0.0548698913)79:0.0159973782,Trigonotarsus:0.0951102060)62:0.0046856259,(((((((((Rhinostomus:0.0117219221,Rhinostomus_2:0.0417191773)87:0.0809607958,(Yuccaborus:0.0983528555,Rhinostomus_4:0.1648459553)66:0.0162281517)74:0.0531635614,Rhinostomus_3:0.2349036672)31:0.0015003275,(Sipalinus:0.0000023325,Sipalinus_2:0.0000027354)98:0.0720622357)47:0.0200775457,(Orthognathus:0.0899695682,Mesocordylus:0.0755311945)99:0.0376460025)64:0.0396654151,(((Dryophthorus:0.0125270663,(Dryophthorus_2:0.0000028734,Dryophthorus_3:0.0000027354)65:0.0254930035)100:0.0454831586,(Orthosinus:0.0417377268,(Stromboscerini:0.0000021732,Stromboscerini_2:0.0000023082)100:0.0248177916)99:0.0230735815)99:0.0410222133,Nephius:0.1154959348)93:0.0164587590)74:0.0281864252,(Scyphophorus:0.0026538711,Scyphophorus_2:0.0044187143)100:0.0821457455)23:0.0036048224,(((((((((Metamasius:0.0227396450,Metamasius_3:0.0067180573)99:0.0215418930,Metamasius_2:0.0452278131)56:0.0079294638,(Sphenophorus:0.0340259436,(Sphenophorus_2:0.0000020171,Sphenophorus_3:0.0010950146)100:0.0223545405)59:0.0054684034)79:0.0078739576,(Sphenophorus_5:0.0443666972,Sphenophorus_4:0.0000027405)100:0.0068539857)59:0.0025859052,(((Cactophagus:0.0119180405,(Rhodobaenus:0.0132949397,Rhodobaenus_2:0.0042286159)100:0.0053743164)97:0.0024567594,Cactophagus_3:0.0204232177)57:0.0000028196,(Cactophagus_2:0.0000023210,Tapinostethus:0.0180649585)100:0.0179129299)43:0.0028559947)57:0.0045732228,Metamasius_4:0.0211890955)96:0.0186293024,Acantharhinus:0.0392956079)99:0.0333843631,Poteriophorus:0.0764636715)70:0.0095247295,Rhabdoscelus:0.1069777015)94:0.0311716404):0.0120314307,(((((Rhynchophorus:0.0691299921,(Rhynchophorus_2:0.0273851703,((Dynamis:0.0193941682,(Rhynchophorus_7:0.0528328768,Rhynchophorus_4:0.0545244266)76:0.0013842858)94:0.0097491711,((Rhynchophorus_3:0.0036592591,Rhynchophorus_5:0.0000025285)93:0.0008530506,Rhynchophorus_6:0.0344713053)87:0.0276344575)87:0.0223045646)81:0.0029578970)76:0.0081770316,Cyrtotrachelus:0.0000023159)99:0.0336730242,Prodioctes:0.0771354950)93:0.0157455003,Cosmoplites:0.0816949858)99:0.0395043669,(Cryptoderma:0.0008109807,Cryptoderma_2:0.0030528412)100:0.0872431195)48:0.0155156855)44:0.0053599632)42:0.9526161569,Euplatypus:0.0830194077,Euplatypus_2:0.0086369485)100;
+
+TIME STAMP
+----------
+
+Date and time: Mon Nov  2 14:52:14 2020
+Total CPU time used: 167.225885 seconds (0h:2m:47s)
+Total wall-clock time used: 87.98790619 seconds (0h:1m:27s)
+

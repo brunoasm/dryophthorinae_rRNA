@@ -1,6 +1,8 @@
 ---
 title: "Time tree of Dryophthorinae"
-output: html_notebook
+output:
+  html_notebook:
+    df_print: paged
 ---
 
 Here we will prepare a figure comparing inferences from FBD model with node dating for Dryophthorinae.
